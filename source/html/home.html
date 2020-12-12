@@ -1,0 +1,136 @@
+{% from 'card.html' import card %}
+{% from 'element-section.html' import elementSection %}
+
+{% extends 'layouts/default.html' %}
+
+{% block content %}
+
+  {% include 'logo.html' %}
+
+  {% include 'title.html' %}
+
+  {% call elementSection() %}
+
+  {{ card({
+    title: 'Digitale meeloopdag',
+    description: 'Virtuele rondleiding door het schoolgebouw; luister naar de ervaringen van een AD-student, kijk filmpjes en 360 graden fotos en laar je hersenen kraken, want je kennis wordt op de proef gesteld!',
+    image: '/assets/images/ervaringen-van-studenten.png',
+    button: {
+        label: 'Start meeloopdag',
+        controls: 'modal-meeloopdag'
+      }
+  }) }}
+
+  {{ card({
+    title: 'Ervaringen van studenten',
+    description: 'Studenten vertellen je over de ervaring die zij hebben gehad in het eerste jaar van de opleiding',
+    image: '/assets/images/ervaringen-van-studenten.png',
+    button: {
+        label: 'Lees ervaringen',
+        controls: 'modal-ervaringen'
+      }
+  }) }}
+
+  {{ card({
+    title: 'Contact met studenten',
+    description: 'Wij snappen dat het lastig is om een goede studiekeuze te maken. Een gesprek met een studenten van de opleiding kan je helpen met alle vragen die je hebt. Ze zijn bereikbaaar via Whatsapp en Email',
+    image: '/assets/images/contact-met-studenten.png',
+    button: {
+        label: 'Neem contact op',
+        controls: 'modal-contact'
+      }
+  }) }}
+
+  {{ card({
+    title: 'Uitdagingen',
+    description: 'Maak echte opdrachten die ook tijdens de lessen gegeven worden. Het maakt niet uit of je een beginner bent of al veel ervaring hebt.',
+    image: '/assets/images/contact-met-studenten.png',
+    button: {
+        label: 'Opdrachten maken',
+        controls: 'modal-uitdaingen'
+      }
+  }) }}
+
+  {{ card({
+    title: 'Werkmogelijkheden',
+    description: 'Met je Associate Degree Frontend Design & Development heb je veel mogelijkheden op de arbeidsmarkt. Je kan bijvoorbeeld terecht in de wereld van digital agencies.',
+    image: '/assets/images/contact-met-studenten.png',
+    button: {
+        label: 'Bekijk beroepen',
+        controls: 'modal-werkmogelijkheden'
+      }
+  }) }}
+
+  {{ card({
+    title: 'Studieprogramma',
+    description: 'Bij de start van je studie ligt de nadruk op het ontwikkelen van kennis en vaardigheden. Ook komt direct de praktijk aan bod. Je leert praktijkcases aan te pakken samen met medestudenten, docenten en professionals.',
+    image: '/assets/images/contact-met-studenten.png',
+    button: {
+        label: 'Bekijk programma',
+        controls: 'modal-studieprogramma'
+      }
+  }) }}
+
+  {{ card({
+    title: 'Praktische informatie',
+    description: 'In één overzicht alle praktische informatie over de opleiding.',
+    image: '/assets/images/contact-met-studenten.png',
+    button: {
+        label: 'Bekijk informatie',
+        controls: 'modal-informatie'
+      }
+  }) }}
+
+  {{ card({
+    title: 'Videos over de opleiding',
+    description: 'Geen zin om te lezen? Preof de sfeer van de opleiding videos te bekijken',
+    image: '/assets/images/contact-met-studenten.png',
+    button: {
+        label: 'Bekijk videos',
+        controls: 'modal-videos'
+      }
+  }) }}
+
+  {{ card({
+    title: 'Werk van Studenten',
+    description: 'De studenten maken tijdens de lessen opdrachten voor echte klanten. Zij delen graag het werk dat ze hebben gemaakt voor deze klanten met jou',
+    image: '/assets/images/contact-met-studenten.png',
+    button: {
+        label: 'Bekijk studentenwerk',
+        controls: 'modal-studentenwerk'
+      }
+  }) }}
+
+  {{ card({
+    title: 'Docenten lounge',
+    description: 'Maak kennis met de docenten van de opleiding in de docenten lounge',
+    image: '/assets/images/contact-met-studenten.png',
+    button: {
+        label: 'Kennismaken',
+        controls: 'modal-docenten'
+      }
+  }) }}
+
+  {{ card({
+    title: 'Locatie en wonen',
+    description: 'Bekijk de locatie van de school en woonmogelijkheden rondom de school. Ook vertellen we je over de stad Amsterdam!',
+    image: '/assets/images/contact-met-studenten.png',
+    button: {
+        label: 'Bekijk locatie',
+        controls: 'modal-locatie'
+      }
+  }) }}
+
+  {{ card({
+    title: 'Naast je studie',
+    description: 'Je wilt natuurlijk weten wat je naast je studie kan doen, zoals studieverenigingen, sportactiviteiten, clubs of het vinden van een bijbaantje.',
+    image: '/assets/images/contact-met-studenten.png',
+    button: {
+        label: 'Bekijk Activiteiten',
+        controls: 'modal-naast-studie'
+      }
+  }) }}
+
+  {% endcall %}
+
+{% endblock %}

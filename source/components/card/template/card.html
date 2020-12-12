@@ -1,0 +1,35 @@
+{% from 'button.html' import button %}
+{% from 'image.html' import image %}
+
+{% macro card(data) %}
+  <div class="c-card">
+
+    <div class="card__image-wrapper">
+
+      {{ image({
+        image: data.image,
+        classes: 'card__image',
+        alt: data.title
+      })}}
+
+    </div>
+
+    <div class="card__content-wrapper">
+
+      <h3 class="card__title">{{ data.title }}</h3>
+
+      <p class="card__description">{{ data.description }}</p>
+
+      {{ button({
+        element: 'button',
+        label: data.button.label, 
+        controls: data.button.controls, 
+        variant: 'secondary',  
+        class: 'card__button',
+        attr: 'aria-label="Open modalbox"'
+      }) }}
+
+    </div>
+
+  </div>
+{% endmacro %}

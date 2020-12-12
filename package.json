@@ -1,0 +1,48 @@
+{
+  "name": "frontend-setup",
+  "version": "2.5.2",
+  "license": "MIT",
+  "description": "A basic project setup for creating (static) html templates. Filled with automated tasks and configuration options.",
+  "author": "Dept",
+  "contributors": [
+    {
+      "name": "Adrian Klingen",
+      "email": "adrian.klingen@deptagency.com"
+    },
+    {
+      "name": "Dylan Vens",
+      "email": "dylan.vens@deptagency.com"
+    },
+    {
+      "name": "Kees van Lierop",
+      "email": "kees.vanlierop@deptagency.com"
+    },
+    {
+      "name": "Daphne Smit",
+      "email": "daphne.smit@deptagency.com"
+    }
+  ],
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/tamtam-nl/tamtam-frontend-setup"
+  },
+  "engines": {
+    "node": "^12",
+    "npm": "^6"
+  },
+  "scripts": {
+    "postinstall": "dept-builder npm-install-recursive --dirs source/components,source/utilities --ignore node_modules",
+    "bamboo": "dept-builder deploy",
+    "deploy": "dept-builder deploy",
+    "gulp": "dept-builder start",
+    "start": "dept-builder start",
+    "build": "dept-builder build",
+    "dist": "dept-builder dist",
+    "task": "dept-builder task",
+    "create": "dept-builder create"
+  },
+  "devDependencies": {
+    "tamtam-frontend-builder": "git+https://bitbucket.org/tamtam-nl/tamtam-frontend-builder.git#2.0.2"
+  }
+}

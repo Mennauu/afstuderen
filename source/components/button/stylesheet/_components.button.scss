@@ -1,0 +1,44 @@
+@import 'button/mixin.button';
+@import 'button/mixin.icon';
+@import 'button/size/mixin.small';
+@import 'button/size/mixin.large';
+@import 'button/variant/mixin.ghost';
+@import 'button/variant/mixin.primary';
+@import 'button/variant/mixin.secondary';
+
+.c-button {
+  @include button;
+}
+
+/**
+* Button variants
+*/
+.c-button--primary {
+  @include button--primary;
+}
+
+.c-button--secondary {
+  @include button--secondary;
+}
+
+.c-button--ghost {
+  @include button--ghost;
+}
+
+/**
+* Button icon modifier
+*/
+.button--icon {
+  @include button--icon;
+}
+
+/**
+* Button sizes
+*/
+.button--small {
+  @include button--small;
+}
+
+.button--large {
+  @include button--large;
+}

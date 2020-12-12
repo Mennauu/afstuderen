@@ -1,0 +1,36 @@
+// =========================================================================
+//
+//  GRADIENTS
+//  ---------------------------------------------------
+//  https://codepen.io/lhermann/pen/qmpMGQ
+//
+//  Clothoid-gradients look better (less harsh) behind text.
+//
+//  Usage:
+//
+//  @include linear-gradient($color: #000000, $alpha-from: 1, $alpha-to: 0)
+//
+//  @include clothoid-gradient($color: #000000, $alpha-from: 1, $alpha-to: 0)
+//
+// =========================================================================
+
+$color: #000000 !default;
+$alpha-from: 1 !default;
+$alpha-to: 0 !default;
+
+@mixin linear-gradient($color: #000000, $alpha-from: 1, $alpha-to: 0) {
+  background-image: linear-gradient(rgba($color, $alpha-from) 0, rgba($color, $alpha-to) 100%);
+}
+
+@mixin clothoid-gradient($color: #000000, $alpha-from: 1, $alpha-to: 0) {
+  $diff: $alpha-from - $alpha-to;
+  background-image: linear-gradient(
+    rgba($color, $alpha-from) 0,
+    rgba($color, $alpha-from - $diff * 0.7) 50%,
+    rgba($color, $alpha-from - $diff * 0.85) 65%,
+    rgba($color, $alpha-from - $diff * 0.925) 75.5%,
+    rgba($color, $alpha-from - $diff * 0.963) 82.85%,
+    rgba($color, $alpha-from - $diff * 0.981) 88%,
+    rgba($color, $alpha-to) 100%
+  );
+}

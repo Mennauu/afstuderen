@@ -1,0 +1,5 @@
+// Add an extra nested layer to try to make sure the debug style won't be compromised by the css of the project
+html.u-debug_page_ {
+  background-color: $dev-color-off-white;
+  color: $dev-color-grey-dark;
+}

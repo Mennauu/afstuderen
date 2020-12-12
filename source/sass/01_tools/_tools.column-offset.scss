@@ -1,0 +1,85 @@
+//
+//    Allows offsetting components by an Nth amount of grid columns without using actual grid elements.
+//
+//    @param offset-direction   { value }              - valid values: left right
+//    @param column-offset      { number }             - amount of columns to be offset
+//    @param negative-margin    { boolean }            - negative margin value
+//    @param container-padding  { pixel value }        - option to pass other value than grid padding in case of an element that is positioned absolute and doesnt take grid padding into consideration
+//
+//    example usage:
+//    --------------
+//
+//    .foo {
+//      @include column-offset(left, 2)
+//    }
+//
+
+$grid-max-width: map_get($grid-config, 'max-width');
+$grid-column-count: map_get($grid-config, 'columns');
+$grid-container-padding-small: #{strip-unit(map_get($grid-config, 'container-gutter-small') * 2)}px;
+$grid-container-padding: #{strip-unit(map_get($grid-config, 'container-gutter') * 2)}px;
+
+@mixin column-offset(
+  $offset-direction: 'left',
+  $column-offset: '1',
+  $negative-margin: false,
+  $container-padding: null,
+  $property: null,
+) {
+  @if ($container-padding) {
+    $container-padding: $container-padding;
+  } @else {
+    $container-padding: $grid-container-padding-small;
+  }
+
+  @if ($negative-margin) {
+    $column-offset: -$column-offset;
+  }
+
+  @if($property) {
+    $property: $property;
+  } @else {
+    $property: margin-#{$offset-direction};
+  }
+
+  #{$property}: calc(
+    (100vw - #{strip-unit($container-padding)}) / #{$grid-column-count / $column-offset}
+  );
+
+  @include screen-tablet-portrait-and-bigger {
+    @if ($container-padding) {
+      $container-padding: $container-padding;
+    } @else {
+      $container-padding: $grid-container-padding;
+    }
+
+    @if($property) {
+      $property: $property;
+    } @else {
+      $property: margin-#{$offset-direction};
+    }
+
+    #{$property}: calc(
+      (100vw - #{strip-unit($container-padding)}) / #{$grid-column-count / $column-offset}
+    );
+  }
+
+  @include screen-desktop-and-bigger {
+    @if ($container-padding) {
+      $container-padding: $container-padding;
+    } @else {
+      $container-padding: $grid-container-padding;
+    }
+
+    @if($property) {
+      $property: $property;
+    } @else {
+      $property: margin-#{$offset-direction};
+    }
+
+    #{$property}: calc(
+      (100vw - (100vw - (#{$grid-max-width} - #{strip-unit($container-padding)}))) / #{$grid-column-count /
+        $column-offset}
+    );
+  }
+}

@@ -1,0 +1,52 @@
+{#
+
+    A handy helper to check if everything aligns with the grid.
+    Simply include this file somewhere and use the macro this way:
+
+    {{ gridOverlay( { columns: 12 ) }}
+    This will generate all the HTML you need, and provide you with a button
+    on your page to toggle the visiblity of the grid.
+
+    You have some extra options as well:
+    * maxwidth (int) - Width of your grid container (in px)
+    * ontop - If this equals 'true', it will give the container a higher z-index
+    * defaultvisible - During development it can be handy if the overlay is default visible. If 'true', it will be.
+
+    Usage of all options:
+
+    {{ gridOverlay( {
+      columns:          12,
+      maxwidth:         1200,
+      defaultvisible:   "true"
+    } ) }}
+
+#}
+
+{% macro gridOverlay( data ) %}
+
+  <div class="grid-overlay__current-viewport">
+    <div class="u-visible--xs">Mobile</div>
+    <div class="u-visible--sm">Mobile plus</div>
+    <div class="u-visible--md">Tablet portrait</div>
+    <div class="u-visible--lg">Tablet landscape</div>
+    <div class="u-visible--xlg">Laptop</div>
+    <div class="u-visible--xxlg">Desktop</div>
+  </div>
+
+  <label for="grid-overlay__checkbox" class="c-button grid-overlay__toggle">Toggle grid</label>
+  <input type="checkbox" class="grid-overlay__check" id="grid-overlay__checkbox">
+  <div class="c-grid-overlay o-container{% if data.defaultvisible == 'true' %} is--default-visible{% endif %}">
+
+    <div class="grid-overlay__grid o-grid"
+         {% if data.maxwidth %}style="max-width: {{data.maxwidth}}px"{% endif %}
+    >
+
+      {% for i in range(0, data.columns) -%}
+        <div class="o-col-1"></div>
+      {%- endfor %}
+
+    </div>
+
+  </div>
+
+{% endmacro %}

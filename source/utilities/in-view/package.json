@@ -1,0 +1,8 @@
+{
+    "name": "dept-inview",
+    "license": "MIT",
+    "repository": "https://bitbucket.org/tamtam-nl/tamtam-frontend-shelf",
+    "dependencies": {
+        "intersection-observer": "0.5.0"
+    }
+}

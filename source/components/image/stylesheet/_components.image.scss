@@ -1,0 +1,52 @@
+// @shelf-version 1.0.0
+.c-image {
+    position: relative;
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+        width: 100%;
+        height: auto;
+    }
+
+    [js-hook-objectfit-img] {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        max-height: none;
+
+        .has--object-fit-polyfill & {
+            opacity: 0;
+        }
+    }
+}
+
+[js-hook-objectfit-container] {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.image__default {
+    opacity: 0;
+    transition: opacity 200ms ease-out;
+
+    .image--is-loaded & {
+        opacity: 1;
+    }
+}
+
+.image__ghost {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    transition: opacity 200ms ease-out 50ms;
+
+    .image--is-loaded & {
+        opacity: 0;
+    }
+}

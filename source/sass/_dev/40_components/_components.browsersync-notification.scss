@@ -1,0 +1,7 @@
+// Move browserSync notification to the bottom right
+#__bs_notify__ {
+  top: auto !important;
+  bottom: 0 !important;
+  border-top-left-radius: 5px !important;
+  border-bottom-left-radius: 0px !important;
+}

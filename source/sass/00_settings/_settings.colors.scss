@@ -1,0 +1,54 @@
+/*----------------------------------*\
+  #COLORS
+\*----------------------------------*/
+
+// Color palette
+
+$color-primary: #2a1d88;
+$color-secondary: #c649a8;
+$color-tertiary: #4fd580;
+
+$color-purple: #3d32b7;
+
+$color-black: #000000;
+$color-grey-dark: #454545;
+$color-grey: #cacaca;
+$color-grey-light: #808080;
+
+$color-white: #ffffff;
+$color-off-white: #ededed;
+
+// Core color settings
+
+$color-background-html: $color-primary;
+$color-background-primary: $color-purple;
+
+$color-text-header: $color-grey-dark;
+$color-text: $color-black;
+
+$color-divider-line: $color-grey-light;
+
+$color-form-placeholder: $color-grey;
+$color-form-focus: $color-primary;
+
+// Social color palette
+
+$color-social-twitter: #00aced;
+$color-social-facebook: #3b5998;
+$color-social-googleplus: #dd4b39;
+$color-social-pinterest: #cb2027;
+$color-social-linkedin: #007bb6;
+$color-social-youtube: #bb0000;
+$color-social-vimeo: #aad450;
+$color-social-instagram: #517fa4;
+$color-social-flickr: #ff0084;
+$color-social-dribbble: #ea4c89;
+$color-social-whatsapp: #4dc247;
+
+// List of social channels with their colors you can use to loop through
+$color-socials-map: (
+  'twitter': $color-social-twitter,
+  'facebook': $color-social-facebook,
+  'linkedin': $color-social-linkedin,
+  'youtube': $color-social-youtube,
+);

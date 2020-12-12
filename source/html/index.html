@@ -1,0 +1,36 @@
+{% extends '_dev/layout.html' %}
+
+{% block content %}
+
+  {% include '_dev/project/pages-list.html' %}
+
+  <div class="o-container _styleguide">
+
+    {% include '_dev/styleguide/block-grid.html' %}
+
+    <div class="o-grid">
+      <div class="o-col-12 o-col-6--md">
+        {% include '_dev/styleguide/block-fonts.html' %}
+      </div>
+      <div class="o-col-12 o-col-6--md">
+        {% include '_dev/styleguide/block-headers.html' %}
+      </div>
+      <div class="o-col-12 o-col-6--md">
+        {% include '_dev/styleguide/block-links.html' %}
+      </div>
+      <div class="o-col-12 o-col-6--md">
+        {% include '_dev/styleguide/block-buttons.html' %}
+      </div>
+      <div class="o-col-12 o-col-6--md">
+        {% include '_dev/styleguide/block-text.html' %}
+      </div>
+      <div class="o-col-12 o-col-6--md">
+        {% include '_dev/styleguide/block-spacing.html' %}
+      </div>
+      <div class="o-col-12">
+        {% include '_dev/styleguide/block-svg.html'  %}
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

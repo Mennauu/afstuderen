@@ -1,0 +1,60 @@
+<p>
+    This project uses <a href="https://mozilla.github.io/nunjucks/" target="_blank">Nunjucks templating engine</a>. Visit the <a href="https://mozilla.github.io/nunjucks/templating.html" target="_blank">documentation</a> for more info.
+    <br/>
+    To enable syntax highlighting in WebStorm or PHPStorm, install the <a href="https://plugins.jetbrains.com/plugin/7303?pr=idea" target="_blank">Twig plugin</a>. Since Nunjucks using the same syntax this works perfectly.
+    <br/>
+    <br/>
+    There are 2 custom tags that have been added to Nunjucks: '<code>debug</code>' and '<code>svg</code>'.
+</p>
+
+<!-- svg tag info -->
+<div class="c-project-info__code-doc">
+
+    <div>
+        <code>svg {name}</code>
+    </div>
+    <div>
+        <p>Will inject the optimized svg contents in this place. SVG's can be added in the assets/svg folder. For an overview of which
+            SVG's are available and their corresponding names: visit the <a href="/styleguide.html" target="_self">styleguide</a>.</p>
+    </div>
+
+</div>
+
+<div class="c-project-info__code-samp">
+
+    <samp>
+        {% raw %}
+        <span class="tag">{% svg</span> <span class="string">&#39;social/facebook&#39;</span> <span class="tag">%}</span>
+        {% endraw %}
+    </samp>
+
+    <p>Example use of the <code>svg</code> tag</p>
+
+</div>
+
+
+<!-- debug tag info -->
+<div class="c-project-info__code-doc">
+
+    <div>
+        <code>debug {property}</code>
+    </div>
+    <div>
+        <p>Will output the property data in a debug block. Useful to see what data is available for you to use in the template. If a
+            property is omitted it will print out the current context.</p>
+    </div>
+
+</div>
+
+<div class="c-project-info__code-samp">
+
+    <samp>
+        {% raw %}
+        <span class="tag">{% debug</span> <span class="tag">%}</span> <span class="comment"><br/>{# -- or -- #}<br/></span> <span
+                class="tag">{% debug</span> <span class="string">&#39;project&#39;</span> <span class="tag">%}</span>
+        {% endraw %}
+    </samp>
+
+    <p>Example use of the <code>debug</code> tag</p>
+
+</div>

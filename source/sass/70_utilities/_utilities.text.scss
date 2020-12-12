@@ -1,0 +1,17 @@
+.u-text--left {
+  @include generate-mediaquery-rules {
+    text-align: left;
+  }
+}
+
+.u-text--centered {
+  @include generate-mediaquery-rules {
+    text-align: center;
+  }
+}
+
+.u-text--right {
+  @include generate-mediaquery-rules {
+    text-align: right;
+  }
+}

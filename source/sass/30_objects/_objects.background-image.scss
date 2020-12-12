@@ -1,0 +1,67 @@
+@mixin background-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center center;
+}
+
+.o-background-image {
+  @include background-image;
+}
+
+.o-background-image--top {
+  @include background-image;
+
+  background-position: center top;
+}
+
+.o-background-image--bottom {
+  @include background-image;
+
+  background-position: center bottom;
+}
+
+.o-background-image--left {
+  @include background-image;
+
+  background-position: left center;
+}
+
+.o-background-image--right {
+  @include background-image;
+
+  background-position: right center;
+}
+
+.o-background-image--overlay {
+  @include background-image;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $color-black;
+    opacity: 0.2;
+  }
+}
+
+.o-background-image--gradient {
+  @include background-image;
+
+  &:after {
+    @include clothoid-gradient($color: #000000, $alpha-from: 0.5, $alpha-to: 0);
+
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}

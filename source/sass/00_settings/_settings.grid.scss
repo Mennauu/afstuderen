@@ -1,0 +1,22 @@
+/*----------------------------------*\
+  #GRID
+\*----------------------------------*/
+
+$grid-gutter-small-breakpoint: $breakpoint-mobile-plus;
+$grid-breakpoints: (
+  'sm': $breakpoint-mobile-plus,
+  'md': $breakpoint-tablet-portrait,
+  'lg': $breakpoint-tablet-landscape,
+  'xlg': $breakpoint-laptop,
+);
+
+$grid-config: (
+  max-width: $breakpoint-desktop,
+  columns: 12,
+  grid-gutter: 20px,
+  grid-gutter-small: 10px,
+  container-gutter: 30px,
+  container-gutter-small: 10px,
+  add-push-pull: true,
+  add-pre-post: true,
+);

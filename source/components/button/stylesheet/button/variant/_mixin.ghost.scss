@@ -1,0 +1,35 @@
+// Style
+$button-ghost-spacing: $global-spacing;
+$button-ghost-border-width: 2px;
+$button-ghost-border-radius: 3px;
+
+// Colors
+$button-ghost-font-color: $color-black;
+$button-ghost-icon-color: $button-ghost-font-color;
+$button-ghost-background-color: transparent;
+$button-ghost-font-color-hover: $color-white;
+$button-ghost-icon-color-hover: $button-ghost-font-color-hover;
+$button-ghost-background-color-hover: $color-black;
+
+// Transitions
+$button-ghost-transition-time: $button-transition-time;
+$button-ghost-transition-ease: $button-transition-ease;
+
+@mixin button--ghost {
+  @include button;
+  background: transparent;
+  box-shadow: 0 0 0 $button-ghost-border-width $button-ghost-font-color inset;
+  transition-property: color, background-color, box-shadow;
+
+  @include hover-focus {
+    color: $button-ghost-font-color-hover;
+    background-color: $button-ghost-background-color-hover;
+    box-shadow: 0 0 0 $button-ghost-border-width $button-ghost-background-color-hover inset;
+  }
+
+  @include keyboard-focus {
+    background-color: lighten($button-ghost-background-color-hover, 50%);
+    box-shadow: 0 0 0 $button-ghost-border-width lighten($button-ghost-background-color-hover, 50%)
+      inset;
+  }
+}

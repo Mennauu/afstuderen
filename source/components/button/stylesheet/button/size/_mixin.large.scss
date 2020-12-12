@@ -1,0 +1,14 @@
+$button-large-spacing: $global-spacing * 2;
+$button-large-icon-spacing: $global-spacing * 6;
+
+@mixin button--large {
+  padding: $button-large-spacing $button-large-spacing * 2;
+
+  &.button--icon {
+    padding-right: $button-large-icon-spacing;
+
+    .button__icon {
+      right: $button-large-spacing * 1.25;
+    }
+  }
+}

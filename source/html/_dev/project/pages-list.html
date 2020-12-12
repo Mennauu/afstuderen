@@ -1,0 +1,14 @@
+<div class="c-project-pages-list">
+    <div class="c-project-pages-list__disclaimer">auto generated pages list</div>
+    <ul>
+        {% for page in project.pages %}
+
+            {% if page != "index.html" %}
+            <li>
+                <a href="{{ page }}">{{ page | replace(".html", "") }}</a>
+            </li>
+            {% endif %}
+
+        {% endfor %}
+    </ul>
+</div>

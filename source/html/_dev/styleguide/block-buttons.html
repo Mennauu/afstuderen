@@ -1,0 +1,72 @@
+{% set title='Buttons' %}
+
+{% extends './block.html' %}
+
+
+{% block content %}
+
+    {% from 'button.html' import button %}
+
+
+    <h4>Regular</h4>
+    {{ button( { label: 'Regular button', url: '#' } ) }}
+
+    <br/><br/>
+
+    {{ button( { label: 'Regular button icon', url: '#', icon: 'chevron-right' } ) }}
+
+    <br/><br/>
+
+    {{ button( { label: 'Small button', url: '#', size: 'small' } ) }}
+
+    <br/><br/>
+
+    {{ button( { label: 'Small button icon', url: '#', size: 'small', icon: 'chevron-right' } ) }}
+
+    <br/><br/>
+
+    {{ button( { label: 'Large button', url: '#', size: 'large' } ) }}
+
+    <br/><br/>
+
+    {{ button( { label: 'Large button icon', url: '#', size: 'large', icon: 'chevron-right' } ) }}
+
+    <br/><br/>
+
+    <h4>Primary</h4>
+    {{ button( { label: 'Primary button', url: '#', variant: 'primary' } ) }}
+
+    <br/><br/>
+
+    {{ button( { label: 'Primary button icon', url: '#', variant: 'primary', icon: 'chevron-right' } ) }}
+
+    <br/><br/>
+
+
+    <h4>Secondary</h4>
+    {{ button( { label: 'Secondary button', url: '#', variant: 'secondary' } ) }}
+
+    <br/><br/>
+
+    {{ button( { label: 'Secondary button icon', url: '#', variant: 'secondary', icon: 'chevron-right' } ) }}
+
+    <br/><br/>
+
+
+    <h4>Ghost</h4>
+
+    {{ button( { label: 'Ghost button', url: '#', variant: 'ghost' } ) }}
+
+    <br/><br/>
+
+    {{ button( { label: 'Ghost button icon', url: '#', variant: 'ghost', icon: 'chevron-right' } ) }}
+
+    <br/><br/>
+
+    {{ button( { label: 'Ghost button small', url: '#', variant: 'ghost', size: 'small' } ) }}
+
+    <br/><br/>
+
+    {{ button( { label: 'Ghost button large', url: '#', variant: 'ghost', size: 'large' } ) }}
+
+{% endblock %}

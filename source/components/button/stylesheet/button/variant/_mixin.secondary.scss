@@ -1,0 +1,39 @@
+// Style
+$button-secondary-spacing: $global-spacing;
+$button-secondary-border-radius: 3px;
+
+// Colors
+$button-secondary-font-color: $color-purple;
+$button-secondary-icon-color: $button-secondary-font-color;
+$button-secondary-background-color: $color-white;
+$button-secondary-font-color-hover: $color-white;
+$button-secondary-icon-color-hover: $button-secondary-font-color-hover;
+$button-secondary-background-color-hover: $color-primary;
+
+// Transitions
+$button-secondary-transition-time: 300ms;
+$button-secondary-transition-ease: $ease-in-out-quad;
+
+@mixin button--secondary {
+  @include button;
+  background-color: $button-secondary-background-color;
+  color: $button-secondary-font-color;
+
+  svg {
+    fill: $button-secondary-font-color;
+  }
+
+  @include hover-focus {
+    color: $button-secondary-font-color-hover;
+    background-color: $button-secondary-background-color-hover;
+  }
+
+  @include keyboard-focus {
+    color: $button-secondary-font-color-hover;
+    background-color: lighten($button-secondary-background-color-hover, 50%);
+
+    svg {
+      fill: $button-secondary-font-color-hover;
+    }
+  }
+}

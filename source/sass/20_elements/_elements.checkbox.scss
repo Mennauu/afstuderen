@@ -1,0 +1,15 @@
+// sass-lint:disable no-vendor-prefixes
+
+@mixin checkbox--reset {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+
+  border: 0;
+  background-color: transparent;
+  outline: none;
+
+  font-size: inherit;
+  text-overflow: ellipsis;
+  text-transform: capitalize;
+}

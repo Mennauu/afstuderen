@@ -1,0 +1,38 @@
+{% set title='Text styles' %}
+
+{% extends './block.html' %}
+
+
+{% block content %}
+
+    <p class="u-text--date">Date text: March 29th</p>
+
+    <br/>
+
+    <p class="u-text--intro">Intro text: Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+        ut fermentum massa justo sit amet risus. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum
+        nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Morbi leo
+        risus, porta ac consectetur ac, vestibulum at eros.</p>
+
+    <br/>
+
+    <p>Regular text: Curabitur blandit tempus porttitor. Etiam porta sem malesuada magna mollis euismod.
+        Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra
+        augue. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+
+
+    <div style="position:relative; height: 300px;">
+
+        <div class="o-background-image--gradient u-text--centered" style="background-image: url(/assets/images/placeholder.400x250.jpg)">
+
+            <p>
+                Overlay text: Curabitur imperdiet enim id.
+            </p>
+
+        </div>
+
+    </div>
+
+
+{% endblock %}
+

@@ -1,0 +1,39 @@
+@charset 'UTF-8';
+
+$assets-path: '../' !default;
+
+/*------------------------------------*\
+  #MAIN
+\*------------------------------------*/
+
+@import '01_tools/tools.conversion';
+
+@import '00_settings/all';
+@import '01_tools/all';
+
+//  Vendor libs
+//      - styles from other sources (npm)
+//[INSERT VENDOR LIBS]
+
+@import '10_generic/generic.font-face';
+@import '10_generic/generic.normalize';
+@import '10_generic/generic.html';
+
+@import '20_elements/all';
+
+@import '30_objects/all';
+
+/* components:scss */
+@import '../components/button/stylesheet/_components.button';
+@import '../components/card/stylesheet/_components.card';
+@import '../components/element-section/stylesheet/_components.element-section';
+@import '../components/footer/stylesheet/_components.footer';
+@import '../components/header/stylesheet/_components.header';
+@import '../components/image/stylesheet/_components.image';
+@import '../components/logo/stylesheet/_components.logo';
+@import '../components/title/stylesheet/_components.title';
+/* endinject */
+
+@import '50_scopes/scopes.rich-text';
+
+@import '70_utilities/all';

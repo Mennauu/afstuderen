@@ -1,0 +1,84 @@
+{% set title='Grid' %}
+
+{% extends './block.html' %}
+
+
+{% block content %}
+
+    <style>
+        .grid-test{
+        }
+
+        .grid-test,
+        .grid-test--blue,
+        .grid-test--green {
+            content: '';
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100px;
+            margin-bottom: 10px;
+            background-color: #333333;
+            text-align: center;
+            color: white;
+        }
+        .grid-test--blue {
+            background-color: #223446;
+        }
+        .grid-test--green {
+            background-color: #2f4631;
+        }
+    </style>
+
+    <p>Small grid example to play with, see the <a href="/readme.html">README</a> for more information.</p><br/>
+
+    <div class="o-grid grid-test-wrapper">
+        <div class="o-col-2 o-col-4--md o-col-6--lg">
+            <span class="grid-test">o-col-2 o-col-4--md o-col-6--lg</span>
+        </div>
+        <div class="o-col-2 o-col-4--md o-col-6--lg">
+            <span class="grid-test">o-col-2 o-col-4--md o-col-6--lg</span>
+        </div>
+        <div class="o-col-2 o-col-4--md o-col-6--lg">
+            <span class="grid-test--blue">o-col-2 o-col-4--md o-col-6--lg</span>
+        </div>
+        <div class="o-col-2 o-col-4--md o-col-6--lg">
+            <span class="grid-test--blue">o-col-2 o-col-4--md o-col-6--lg</span>
+        </div>
+        <div class="o-col-12 o-col-6--md o-col-3--lg">
+            <span class="grid-test--green">o-col-12 o-col-6--md o-col-3--lg</span>
+        </div>
+        <div class="o-col-12 o-col-6--md o-col-3--lg">
+            <span class="grid-test--green">o-col-12 o-col-6--md o-col-3--lg</span>
+        </div>
+        <div class="o-col-12 o-col-6--md o-col-3--lg">
+            <span class="grid-test--green">o-col-12 o-col-6--md o-col-3--lg</span>
+        </div>
+        <div class="o-col-12 o-col-6--md o-col-3--lg">
+            <span class="grid-test--green">o-col-12 o-col-6--md o-col-3--lg</span>
+        </div>
+    </div>
+
+    <h3>Push / Pull</h3>
+    <div class="o-grid">
+        <div class="o-col-5 u-push-7 u-push-0--md">
+            <span class="grid-test">o-col-5 u-push-7 u-push-0--md</span>
+        </div>
+        <div class="o-col-6 u-pull-5 o-col-7--md u-pull-0--md">
+            <span class="grid-test">o-col-6 u-pull-5 u-pull-0--md</span>
+        </div>
+    </div>
+
+    <h3>Pre / Post</h3>
+    <div class="o-grid">
+        <div class="o-col-5 u-pre-1 u-pre-0--md">
+            <span class="grid-test">o-col-5 u-pre-1 u-pre-0--md</span>
+        </div>
+        <div class="o-col-4 u-pre-2 o-col-6--md u-pre-1--md">
+            <span class="grid-test">o-col-4 u-pre-2 o-col-6--md u-pre-1--md</span>
+        </div>
+    </div>
+
+
+{% endblock %}
+

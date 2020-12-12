@@ -1,0 +1,39 @@
+// Style
+$button-primary-spacing: $global-spacing;
+$button-primary-border-radius: 3px;
+
+// Colors
+$button-primary-font-color: $color-white;
+$button-primary-icon-color: $button-primary-font-color;
+$button-primary-background-color: $color-primary;
+$button-primary-font-color-hover: $color-white;
+$button-primary-icon-color-hover: $button-primary-font-color-hover;
+$button-primary-background-color-hover: darken($button-primary-background-color, 10%);
+
+// Transitions
+$button-primary-transition-time: 300ms;
+$button-primary-transition-ease: $ease-in-out-quad;
+
+@mixin button--primary {
+  @include button;
+  background-color: $button-primary-background-color;
+  color: $button-primary-font-color;
+
+  svg {
+    fill: $button-primary-font-color;
+  }
+
+  @include hover-focus {
+    color: $button-primary-font-color-hover;
+    background-color: $button-primary-background-color-hover;
+  }
+
+  @include keyboard-focus {
+    color: $button-primary-font-color-hover;
+    background-color: darken($button-primary-background-color-hover, 20%);
+
+    svg {
+      fill: $button-primary-font-color-hover;
+    }
+  }
+}

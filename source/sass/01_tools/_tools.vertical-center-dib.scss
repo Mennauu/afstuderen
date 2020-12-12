@@ -1,0 +1,50 @@
+// sass-lint:disable no-important
+
+//		vertical center Display Inline-Block
+//
+//		Vertically aligns the element using `vertical-align: middle` and `display: inline-block`.
+//		Creates a 'ghost' element with 100% height before the element(s) to align with.
+//
+//		@see:  https://css-tricks.com/centering-in-the-unknown/
+//
+//
+//		 ____________________________________________________
+//		|    || < ghost element                             |
+//		|    ||       ________                              |
+//		|    ||      |        | < vertical-align: middle    |
+//		|----||------|--------|-----------------------------|
+//		|    ||      |________|                             |
+//		|    ||                                             |
+//		|____||_____________________________________________|
+//
+//
+//		example usage:
+//		--------------
+//
+//		.container {
+//
+//			@include vertical-center-dib( '.item', '.another-item' );
+//
+//		}
+//
+//
+//		@mixin:  vertical-center-dib
+//		@param:  $opt-elements         - any number of children selectors to align.
+
+@mixin vertical-center-dib($opt-elements...) {
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    font-family: monospace;
+    margin-left: -0.25em;
+    vertical-align: middle;
+  }
+
+  @each $element in $opt-elements {
+    #{$element} {
+      display: inline-block !important;
+      vertical-align: middle;
+    }
+  }
+}

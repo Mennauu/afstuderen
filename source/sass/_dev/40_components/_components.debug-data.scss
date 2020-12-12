@@ -1,0 +1,44 @@
+/*
+
+    Styling for the debug log that prints out context data.
+    Can be injected anywhere so we use !important to make sure no style is overwritten.
+
+    */
+
+// @formatter:off
+
+.c-debug-data-log {
+  width: 100% !important;
+  min-width: 600px !important;
+  max-height: 400px !important;
+  background-color: $dev-color-anthracite !important;
+  font-family: consolas, menlo, monaco, monospace !important;
+  font-size: 12px !important;
+  overflow: scroll !important;
+  padding: 5px 10px !important;
+  z-index: 999 !important;
+  text-align: left !important;
+
+  // json syntax highlighting
+
+  .function {
+    color: $dev-color-orange !important;
+  }
+  .string {
+    color: $dev-color-turquoise !important;
+  }
+  .number {
+    color: $dev-color-lime !important;
+  }
+  .boolean {
+    color: $dev-color-orange !important;
+  }
+  .null {
+    color: $dev-color-orange !important;
+  }
+  .key {
+    color: $dev-color-yellow-light !important;
+  }
+
+  // @formatter:on
+}

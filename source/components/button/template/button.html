@@ -1,0 +1,40 @@
+{#
+
+    An example button macro.
+
+    Using macro's for buttons is very useful as it keeps the implementation
+    of a button consistent and easily maintainable as you only have a single place where it's defined.
+
+    Usage:
+    <!-- Include the file containing the macro -->
+    {% include 'button.html' %}
+
+     <!-- Call the macro with button data to create new instances of the button -->
+    {{ button( { label: 'Click here' } ) }}
+    {{ button( { label: 'Tam Tam', url: 'http://www.tamtam.nl', hook: 'tamtam-button' } ) }}
+
+#}
+
+{% macro button( data ) %}
+
+    <{{ data.element or 'a' }} class="
+    {%- if data.variant %}c-button--{{ data.variant }}{% else %}c-button{% endif -%}
+    {%- if data.size %} button--{{ data.size }}{% endif -%}
+    {%- if data.icon %} button--icon{% endif -%}
+    {%- if data.class %} {{ data.class }}{% endif -%}"
+    {%- if data.type %} type="{{ data.type }}"{% endif -%}
+    {%- if not data.type and data.element == 'button' %} type="button"{% endif -%}
+    {%- if data.url %} href="{{ data.url }}"{% endif -%}
+    {%- if data.hook %} js-hook-{{ data.hook }}{% endif -%}
+    {%- if data.controls %} aria-controls="{{ data.controls }}"{% endif -%}
+    {%- if data.attr %} {{ data.attr|safe }}{% endif -%}>
+
+        <span class="button__label">{{ data.label }}</span>
+
+        {%- if data.icon %}
+          <span class="button__icon">{% svg 'icons/' + data.icon %}</span>
+        {% endif -%}
+
+    </{{ data.element or 'a' }}>
+
+{% endmacro %}

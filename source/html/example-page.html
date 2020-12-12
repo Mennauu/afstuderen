@@ -1,0 +1,62 @@
+{% extends 'layouts/default.html' %}
+
+{% block content %}
+
+    <div class="o-container">
+
+        <h1 class="u-margin-bottom--lg">Example page template</h1>
+
+        <h3 class="u-margin-bottom--xs">All the data available in this template:</h3>
+
+        {% debug %}
+
+        <h3 class="u-margin-top--md">How to use the data:</h3>
+        <br/>
+
+        <div class="u-margin-bottom--xs">
+            Website's title: {{ site.title }}<br/>
+            Website's description: {{ site.description }}<br/>
+            Project is in debug mode: {{ project.debug }}<br/>
+        </div>
+
+        <div class="u-margin-bottom--md">
+            <!-- You can also 'set' data -->
+            {% set someData = {
+                custom: 'Some custom data created inside the template...'
+            } %}
+            {% set someOtherData = 'Other data' %}
+
+            <span>{{ someData.custom }}</span>
+            <span>{{ someOtherData }}</span>
+        </div>
+
+        <h3>How to inject SVG images:</h3>
+        <br/>
+
+        <div class="u-margin-bottom--md">
+            {% svg 'social/facebook' %}
+            {% svg 'social/twitter' %}
+            {% svg 'social/google-plus' %}
+        </div>
+
+        <h3>How to use button macros:</h3>
+        <br/>
+
+        <!-- Include the file containing the macro, but it won't render anything until you call it -->
+        {% from 'button.html' import button %}
+
+        <!-- Call the macro with optional arguments to create new instances of the button -->
+        {{ button( { label: 'Click here' } ) }}
+
+        <br/><br/>
+
+        {{ button( { label: 'button with an arrow', icon: 'chevron-right' } ) }}
+
+        <h3 class="u-margin-top--md">Including modules:</h3>
+        <br/>
+
+        {% include 'example.html' %}
+
+    </div>
+
+{% endblock %}

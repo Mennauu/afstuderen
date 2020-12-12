@@ -1,0 +1,105 @@
+$dev-color-grid: $dev-color-primary;
+$dev-color-grid-padding: darken($dev-color-grid, 50%);
+
+%grid-overlay-box-shadow {
+  $breakpoint-gutter: map_get($grid-config, 'grid-gutter') / 2;
+  background: $dev-color-grid;
+  box-shadow: #{$breakpoint-gutter} -#{$breakpoint-gutter} 0 0 $dev-color-grid-padding inset,
+    -#{$breakpoint-gutter} -#{$breakpoint-gutter} 0 0px $dev-color-black inset;
+
+  @include screen-mobile-and-smaller {
+    $breakpoint-gutter: map_get($grid-config, 'grid-gutter-small') / 2;
+    box-shadow: #{$breakpoint-gutter} -#{$breakpoint-gutter} 0 0 $dev-color-grid-padding inset,
+      -#{$breakpoint-gutter} -#{$breakpoint-gutter} 0 0px $dev-color-black inset;
+  }
+}
+
+.c-grid-overlay {
+  display: none !important;
+  height: 100%;
+  left: 50%;
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  transform: translate3d(-50%, 0, 0);
+  width: 100%;
+  z-index: 99;
+
+  @media screen and (min-width: $breakpoint-mobile-plus) and (max-width: map_get( $grid-config, 'max-width') + (map_get( $grid-config, 'grid-gutter') * 2)) {
+    left: 0;
+    transform: none;
+  }
+
+  &.is--default-visible {
+    display: block !important;
+  }
+
+  [class*='col-'] {
+    height: 100vh;
+    opacity: 0.06;
+    @extend %grid-overlay-box-shadow;
+  }
+}
+
+.grid-overlay__current-viewport {
+  bottom: 0;
+  font-size: 1.3rem;
+  right: 0;
+  position: fixed;
+  text-transform: none;
+  z-index: 4;
+  background-color: $dev-color-primary;
+  padding: $global-spacing;
+  color: $dev-color-white;
+  font-weight: bold;
+  pointer-events: none;
+
+  &:hover {
+    opacity: 0.3;
+  }
+}
+
+.grid-overlay__toggle.c-button {
+  bottom: 0;
+  font-size: 1.3rem;
+  left: 0;
+  position: fixed;
+  text-transform: none;
+  z-index: 4;
+
+  &:hover {
+    opacity: 0.3;
+  }
+}
+
+.grid-overlay__check {
+  position: absolute;
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.grid-overlay__check:checked + .c-grid-overlay {
+  display: block !important;
+
+  &.is--default-visible {
+    display: none !important;
+  }
+}
+
+// .grid-overlay__grid {
+// &:after {
+//     position: absolute;
+//     top: 0;
+//     left: 100%;
+//     width: map_get($grid-config, 'grid-gutter');
+//     height: 100%;
+//     content: "";
+//     opacity: .06;
+//     @extend %grid-overlay-box-shadow;
+
+//     @include screen-mobile-and-smaller {
+//         width: map_get($grid-config, 'grid-gutter-small');
+//     }
+// }
+// }

@@ -1,0 +1,30 @@
+{
+    "language": "nl",
+    "direction": "ltr",
+    "url": "http://www.tamtam.nl",
+    "gtm": "GTM-XXXX",
+    "title": "TITLE HERE",
+    "description": "DESCRIPTION HERE",
+    "image": "http://www.tamtam.nl/wp-content/uploads/2015/11/12292876_1059929187373281_433234993_n.jpg",
+    "preconnect": [
+        {
+            "url": "https://googletagmanager.com/"
+        },
+        {
+            "url": "https://google-analytics.com/"
+        }
+    ],
+    "preload": [
+        {
+            "url": "/assets/css/main.css",
+            "as": "style",
+            "onload": "onload=\"this.onload=null;this.rel='stylesheet'\""
+        }
+    ],
+    "modulepreload": [
+        {
+            "url": "/assets/js/main-es.js",
+            "as": "script"
+        }
+    ]
+}

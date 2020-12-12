@@ -1,0 +1,4 @@
+// sass-lint:disable mixin-name-format
+
+//  Init Grid
+@include grid-create($grid-config);

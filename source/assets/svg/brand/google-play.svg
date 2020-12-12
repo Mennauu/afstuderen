@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="46" height="50" viewBox="0 0 46 50">
+  <path fill="none" d="M26.299 24.97l7.764-7.797h-.002l-7.762 7.797L1.517.096h-.001l24.783 24.878L1.478 49.891l24.821-24.917 7.798 7.828h.004z"/>
+  <linearGradient id="a" gradientUnits="userSpaceOnUse" x1="848.523" y1="110.529" x2="815.699" y2="89.987" gradientTransform="rotate(45.001 540.49 -932.057)">
+    <stop offset="0" stop-color="#d7e69d"/>
+    <stop offset=".326" stop-color="#9cd2a4"/>
+    <stop offset="1" stop-color="#01a4b6"/>
+  </linearGradient>
+  <path fill="url(#a)" d="M34.061 17.173L3.807.477C2.951.006 2.158-.104 1.517.095L26.3 24.97l7.761-7.797z"/>
+  <linearGradient id="b" gradientUnits="userSpaceOnUse" x1="829.415" y1="93.029" x2="871.95" y2="104.149" gradientTransform="rotate(45.001 540.49 -932.057)">
+    <stop offset="0" stop-color="#ed277b"/>
+    <stop offset=".672" stop-color="#f9a877"/>
+    <stop offset="1" stop-color="#feeb74"/>
+  </linearGradient>
+  <path fill="url(#b)" d="M34.101 32.802l10.327-5.7c2.095-1.161 2.095-3.051 0-4.205l-10.367-5.724-7.764 7.796 7.804 7.833z"/>
+  <linearGradient id="c" gradientUnits="userSpaceOnUse" x1="853.224" y1="126.115" x2="807.043" y2="98.945" gradientTransform="rotate(45.001 540.49 -932.057)">
+    <stop offset="0" stop-color="#89cfbd"/>
+    <stop offset=".485" stop-color="#35a0ba"/>
+    <stop offset=".835" stop-color="#1463aa"/>
+    <stop offset="1" stop-color="#084d9f"/>
+  </linearGradient>
+  <path fill="url(#c)" d="M1.516.096C.595.385 0 1.32 0 2.735l.005 44.527c0 1.397.577 2.321 1.472 2.628L26.3 24.974 1.516.096z"/>
+  <linearGradient id="d" gradientUnits="userSpaceOnUse" x1="869.918" y1="104.62" x2="841.585" y2="141.947" gradientTransform="rotate(45.001 540.49 -932.057)">
+    <stop offset="0" stop-color="#f04a2b"/>
+    <stop offset=".341" stop-color="#d43f65"/>
+    <stop offset=".793" stop-color="#90499c"/>
+    <stop offset="1" stop-color="#7851a1"/>
+  </linearGradient>
+  <path fill="url(#d)" d="M1.478 49.891c.644.218 1.452.117 2.33-.367L34.1 32.802l-7.8-7.828L1.478 49.891z"/>
+</svg>

@@ -1,0 +1,23 @@
+{
+  "eslint.validate": ["javascript", "vue", "typescript"],
+  "files.associations": {
+    "*.js": "javascript"
+  },
+  "[javascript]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+  },
+  "[scss]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+  },
+  "[html]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": false
+    }
+  },
+  "json.format.enable": true,
+  "eslint.enable": true
+}

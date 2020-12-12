@@ -1,0 +1,76 @@
+// Style
+$button-spacing: $global-spacing;
+$button-border-radius: 0;
+
+// Colors
+$button-font-color: $color-black;
+$button-icon-color: $button-font-color;
+$button-background-color: $color-grey;
+$button-font-color-hover: $color-white;
+$button-icon-color-hover: $button-font-color-hover;
+$button-background-color-hover: darken($button-background-color, 10%);
+
+// Transitions
+$button-transition-time: 300ms;
+$button-transition-ease: $ease-in-out-quad;
+
+@mixin button {
+  @include button--base;
+  padding: $button-spacing * 1.5 $button-spacing * 4;
+  border-radius: $button-border-radius;
+  background-color: $button-background-color;
+  color: $button-font-color;
+  transition: $button-transition-time $button-transition-ease;
+  transition-property: color, background-color;
+  text-transform: uppercase;
+  font-weight: $font-weight-bold;
+  position: relative;
+
+  .button__label {
+    display: block;
+  }
+
+  svg {
+    fill: $button-font-color;
+    transition: $button-transition-time $button-transition-ease;
+    transition-property: fill;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: 15px solid transparent;
+    border-right: 10px solid transparent;
+    border-left: 20px solid $color-purple;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-top: 15px solid transparent;
+    border-right: 20px solid $color-off-white;
+    border-left: 10px solid transparent;
+  }
+
+  @include hover-focus {
+    color: $button-font-color-hover;
+    background-color: $button-background-color-hover;
+
+    svg {
+      fill: $button-font-color-hover;
+    }
+  }
+
+  @include keyboard-focus {
+    color: $button-font-color-hover;
+    background-color: darken($button-background-color-hover, 50%);
+
+    svg {
+      fill: $button-font-color-hover;
+    }
+  }
+}

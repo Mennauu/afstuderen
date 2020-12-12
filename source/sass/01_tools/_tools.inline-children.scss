@@ -1,0 +1,14 @@
+//
+//    Kills all the whitespace within a container
+//      - or restores the whitespace within a container
+//
+
+//  Uses a mixin so it can also be used inside of media queries
+@mixin inline-children {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+%inline-children {
+  @include inline-children;
+}

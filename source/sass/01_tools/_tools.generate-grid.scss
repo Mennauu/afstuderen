@@ -1,0 +1,289 @@
+// sass-lint:disable mixin-name-format, no-warn, quotes, function-name-format, brace-style, trailing-semicolon, indentation
+
+$grid-config: (
+  postfix: '',
+  columns: 12,
+  max-width: 1280px,
+  gutter: 30px,
+  gutter-small: 15px,
+  add-push-pull: true,
+  add-pre-post: true,
+) !default;
+
+$container-base-class: 'o-container' !default;
+$grid-base-class: 'o-grid' !default;
+$grid-column-base-class: 'o-col' !default;
+$grid-gutter-small-breakpoint: 768px !default; //  Defines when the grid will switch to the smaller gutters.
+
+//  A collection of breakpoints with their corresponding class modifiers. For the breakpoints a media query of (max-width) is used.
+//  Modifiers are used like this: 'md' will create 'col-md-1', 'pre-md-1', 'post-md-1', ...etc.
+//  NOTE:   The breakpoints have to be defined from small to large!
+$grid-breakpoints: (
+  'sm': 480px,
+  'md': 768px,
+) !default;
+
+// Defines whether to add grid--fill and grid--middle helper class
+// .grid--fill and .grid--middle can be set on any grid,
+//      - .grid--fill forces the columns to take equal heights.
+//      - .grid--middle forces the columns to align vertically.
+// Both helpers are automatically reset at every breakpoint as they can only be used on single row grids.
+// E.g.:    <div class="grid-12 grid--fill grid-md--fill"> ...
+$grid-add-fill: true !default;
+$grid-add-middle: true !default;
+$grid-fill-modifier: 'fill' !default;
+$grid-middle-modifier: 'middle' !default;
+
+//  A mixin that creates the base of the grid. It includes default widths for its columns.
+@mixin grid-create-base(
+  $max-width,
+  $container-class,
+  $grid-class,
+  $column-class,
+  $container-gutter-size,
+  $container-gutter-size-small,
+  $grid-gutter-size,
+  $grid-gutter-size-small
+) {
+  .#{$container-class} {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $container-gutter-size-small;
+    padding-left: $container-gutter-size-small;
+    max-width: $max-width;
+
+    @media (min-width: $grid-gutter-small-breakpoint) {
+      padding-right: $container-gutter-size;
+      padding-left: $container-gutter-size;
+    }
+  }
+
+  .#{$grid-class} {
+    box-sizing: border-box;
+    width: calc(100% + #{$grid-gutter-size-small});
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: $grid-gutter-size-small * 0.5 * -1;
+    margin-left: $grid-gutter-size-small * 0.5 * -1;
+
+    @media (min-width: $grid-gutter-small-breakpoint) {
+      width: calc(100% + #{$grid-gutter-size});
+      margin-right: $grid-gutter-size * 0.5 * -1;
+      margin-left: $grid-gutter-size * 0.5 * -1;
+    }
+  }
+
+  .#{$grid-class}.reverse {
+    flex-direction: row-reverse;
+  }
+
+  .#{$column-class}.reverse {
+    flex-direction: column-reverse;
+  }
+}
+
+@mixin grid-column-base($grid-gutter-size, $grid-gutter-size-small) {
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding-right: $grid-gutter-size-small * 0.5;
+  padding-left: $grid-gutter-size-small * 0.5;
+
+  @media (min-width: $grid-gutter-small-breakpoint) {
+    padding-right: $grid-gutter-size * 0.5;
+    padding-left: $grid-gutter-size * 0.5;
+  }
+}
+
+@mixin grid-create-base-columns(
+  $columns,
+  $pre-post,
+  $push-pull,
+  $grid-gutter-size,
+  $grid-gutter-size-small
+) {
+  .#{$grid-column-base-class} {
+    @include grid-column-base($grid-gutter-size, $grid-gutter-size-small);
+    flex-basis: auto;
+    display: flex;
+  }
+
+  @for $column from 0 through $columns {
+    $column-width: 100% / $columns * $column;
+
+    .#{$grid-column-base-class}-#{$column} {
+      @include grid-column-base($grid-gutter-size, $grid-gutter-size-small);
+      flex-basis: $column-width;
+      max-width: $column-width;
+    }
+
+    @if ($push-pull) {
+      @include grid-create-push-pull($column, $column-width);
+    }
+
+    @if ($pre-post) {
+      @include grid-create-pre-post($column, $column-width);
+    }
+  }
+
+  .#{$grid-column-base-class} {
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 100%;
+  }
+}
+
+@mixin grid-create-responsive-columns(
+  $breakpoints,
+  $columns,
+  $pre-post,
+  $push-pull,
+  $grid-gutter-size,
+  $grid-gutter-size-small
+) {
+  @each $size-modifier, $breakpoint in $breakpoints {
+    @media only screen and (min-width: $breakpoint) {
+      .#{$grid-column-base-class}--#{$size-modifier} {
+        @include grid-column-base($grid-gutter-size, $grid-gutter-size-small);
+        flex-basis: auto;
+      }
+
+      @for $column from 0 through $columns {
+        $column-width: 100% / $columns * $column;
+
+        .#{$grid-column-base-class}-#{$column}--#{$size-modifier} {
+          @include grid-column-base($grid-gutter-size, $grid-gutter-size-small);
+          flex-basis: $column-width;
+          max-width: $column-width;
+        }
+
+        @if ($push-pull) {
+          @include grid-create-push-pull($column, $column-width, $size-modifier);
+        }
+
+        @if ($pre-post) {
+          @include grid-create-pre-post($column, $column-width, $size-modifier);
+        }
+      }
+
+      .#{$grid-column-base-class}--#{$size-modifier} {
+        flex-grow: 1;
+        flex-basis: 0;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@mixin grid-create-push-pull($column, $column-width, $size-modifier: false) {
+  @include grid-create-offset-utilities(
+    'push',
+    'right',
+    $column,
+    $column-width,
+    $size-modifier,
+    '-'
+  );
+  @include grid-create-offset-utilities(
+    'pull',
+    'left',
+    $column,
+    $column-width,
+    $size-modifier,
+    '-'
+  );
+}
+
+@mixin grid-create-pre-post($column, $column-width, $size-modifier: false) {
+  @include grid-create-offset-utilities(
+    'pre',
+    'margin-left',
+    $column,
+    $column-width,
+    $size-modifier
+  );
+  @include grid-create-offset-utilities(
+    'post',
+    'margin-right',
+    $column,
+    $column-width,
+    $size-modifier
+  );
+}
+
+@mixin grid-create-offset-utilities(
+  $offset-name,
+  $offset-value,
+  $column,
+  $column-width,
+  $size-modifier: false,
+  $value-prefix: false
+) {
+  @if $size-modifier {
+    $size-modifier: --#{$size-modifier};
+  } @else {
+    $size-modifier: '';
+  }
+
+  @if $value-prefix == '-' {
+    $column-width: $column-width * -1;
+  }
+  $column: -#{$column};
+
+  .u-#{$offset-name}#{$column}#{$size-modifier} {
+    position: relative;
+
+    @if $column == 0 {
+      #{$offset-value}: 0;
+    } @else {
+      #{$offset-value}: $column-width;
+    }
+  }
+}
+
+//  The main mixin that will parse the config and create all the grids.
+@mixin grid-create($config) {
+  $max-width: map_get($grid-config, 'max-width');
+  $container-class: $container-base-class;
+  $grid-class: $grid-base-class;
+  $column-class: $grid-column-base-class;
+  $columns: map_get($grid-config, 'columns');
+  $grid-gutter-size: map_get($grid-config, 'grid-gutter');
+  $grid-gutter-size-small: map_get($grid-config, 'grid-gutter-small');
+  $container-gutter-size-small: map_get($grid-config, 'container-gutter-small');
+  $container-gutter-size: map_get($grid-config, 'container-gutter');
+  $push-pull: map_get($grid-config, 'add-push-pull');
+  $pre-post: map_get($grid-config, 'add-pre-post');
+
+  // Create grid base
+  @include grid-create-base(
+    $max-width,
+    $container-class,
+    $grid-class,
+    $column-class,
+    $container-gutter-size,
+    $container-gutter-size-small,
+    $grid-gutter-size,
+    $grid-gutter-size-small
+  );
+
+  // Create grid base columns
+  @include grid-create-base-columns(
+    $columns,
+    $pre-post,
+    $push-pull,
+    $grid-gutter-size,
+    $grid-gutter-size-small
+  );
+
+  // Create grid responsive columns
+  @include grid-create-responsive-columns(
+    $grid-breakpoints,
+    $columns,
+    $pre-post,
+    $push-pull,
+    $grid-gutter-size,
+    $grid-gutter-size-small
+  );
+}

@@ -1,0 +1,135 @@
+.u-flex {
+  display: flex;
+}
+
+.u-flex-wrap {
+  @include generate-mediaquery-rules {
+    flex-wrap: wrap;
+  }
+}
+
+.u-flex-nowrap {
+  @include generate-mediaquery-rules {
+    flex-wrap: nowrap;
+  }
+}
+
+.u-flex-column {
+  @include generate-mediaquery-rules {
+    flex-direction: column;
+  }
+}
+
+.u-flex-row {
+  @include generate-mediaquery-rules {
+    flex-direction: row;
+  }
+}
+
+.u-flex-start {
+  @include generate-mediaquery-rules {
+    justify-content: flex-start;
+  }
+}
+
+.u-flex-center {
+  @include generate-mediaquery-rules {
+    justify-content: center;
+  }
+}
+
+.u-flex-baseline {
+  @include generate-mediaquery-rules {
+    align-items: baseline;
+  }
+}
+
+.u-flex-end {
+  @include generate-mediaquery-rules {
+    justify-content: flex-end;
+  }
+}
+
+.u-flex-top {
+  @include generate-mediaquery-rules {
+    align-items: flex-start;
+  }
+}
+
+.u-flex-middle {
+  @include generate-mediaquery-rules {
+    align-items: center;
+  }
+}
+
+.u-flex-bottom {
+  @include generate-mediaquery-rules {
+    align-items: flex-end;
+  }
+}
+
+.u-flex-self-left {
+  @include generate-mediaquery-rules {
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
+
+.u-flex-self-center {
+  @include generate-mediaquery-rules {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.u-flex-self-right {
+  @include generate-mediaquery-rules {
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+
+.u-flex-self-top {
+  @include generate-mediaquery-rules {
+    margin-top: 0;
+    margin-bottom: auto;
+  }
+}
+
+.u-flex-self-middle {
+  @include generate-mediaquery-rules {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+.u-flex-self-bottom {
+  @include generate-mediaquery-rules {
+    margin-top: auto;
+    margin-bottom: 0;
+  }
+}
+
+.u-flex-around {
+  @include generate-mediaquery-rules {
+    justify-content: space-around;
+  }
+}
+
+.u-flex-between {
+  @include generate-mediaquery-rules {
+    justify-content: space-between;
+  }
+}
+
+.u-flex-first {
+  @include generate-mediaquery-rules {
+    order: -1;
+  }
+}
+
+.u-flex-last {
+  @include generate-mediaquery-rules {
+    order: 1;
+  }
+}

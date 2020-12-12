@@ -1,0 +1,11 @@
+@mixin generate-mediaquery-rules {
+  @content;
+
+  @each $breakpoint, $size in $grid-breakpoints {
+    &--#{$breakpoint} {
+      @media only screen and ( min-width : #{$size} ) {
+        @content;
+      }
+    }
+  }
+}

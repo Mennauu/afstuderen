@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "alwaysStrict": true,
+    "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": false,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react",
+    "lib": ["dom", "es7", "scripthost", "es2015"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noEmit": true,
+    "target": "esnext",
+    "emitDecoratorMetadata": true,
+    "sourceMap": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "baseUrl": ".",
+    "paths": {
+      "@utilities/*": ["./source/utilities/*"],
+      "@components/*": ["./source/components/#{component}/javascript/*"],
+      "@/*": ["./source/*"]
+    }
+  },
+  "include": ["./source"],
+  "exclude": ["node_modules", "*/.spec.tsx", "*/.spec.ts"]
+}

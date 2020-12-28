@@ -35,6 +35,7 @@
   display: flex;
   align-items: center;
   padding: $global-spacing-lg $global-spacing-lg * 2;
+  margin: 0 1px 3px 0;
 
   @include screen-tablet-portrait-and-bigger {
     min-width: 200px;
@@ -50,6 +51,7 @@
   position: relative;
   background-color: $color-off-white;
   padding: $global-spacing-sm;
+  margin: 0 1px 1px 0;
 }
 
 .card__title {

@@ -13,7 +13,7 @@
   {
     "title": "Contact met studenten",
     "modalTitle": "Kom in contact met onze tweedejaars-studenten",
-    "description": "Wij snappen dat het lastig is om een goede studiekeuze te maken. Een gesprek met een student van de opleiding kan je helpen met alle vragen die je hebt. Ze zijn bereikbaaar via Whatsapp.",
+    "description": "Een gesprek met een student van de opleiding kan je helpen met alle vragen die je hebt. Ze zijn bereikbaaar via Whatsapp.",
     "image": "/assets/images/elements/contact.png",
     "include": "studentencontact.html",
     "button": {
@@ -24,7 +24,7 @@
   {
     "title": "Werk van Studenten",
     "modalTitle": "De gemaakte opdrachten van onze studenten",
-    "description": "De studenten maken tijdens de lessen opdrachten voor echte klanten. Zij delen graag het werk dat ze hebben gemaakt voor deze klanten.",
+    "description": "De studenten maken tijdens de lessen opdrachten voor echte opdrachtgevers. Zij delen graag het werk dat ze hebben gemaakt voor deze opdrachtgevers.",
     "image": "/assets/images/elements/werk.png",
     "include": "studentenwerk.html",
     "button": {
@@ -35,7 +35,7 @@
   {
     "title": "Ervaringen van studenten",
     "modalTitle": "De gemaakte opdrachten van onze studenten",
-    "description": "Studenten vertellen je over de ervaring die zij hebben gehad in het eerste jaar van de opleiding",
+    "description": "Studenten reflecteren en vertellen je over de ervaringen die zij hebben meegemaakt in het eerste jaar van de opleiding.",
     "image": "/assets/images/elements/ervaringen.png",
     "include": "studentenwerk.html",
     "button": {
@@ -88,9 +88,9 @@
     }
   },
   {
-    "title": "Videos over de opleiding",
+    "title": "Video's over de opleiding",
     "modalTitle": "De gemaakte opdrachten van onze studenten",
-    "description": "Geen zin om te lezen? Preof de sfeer van de opleiding videos te bekijken",
+    "description": "Geen zin om te lezen? Proef de sfeer van de opleiding door video's te bekijken",
     "image": "/assets/images/elements/videos.png",
     "include": "studentenwerk.html",
     "button": {

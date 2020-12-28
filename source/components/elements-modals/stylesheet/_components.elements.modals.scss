@@ -1,0 +1,18 @@
+.modal__header-content {
+  @include screen-mobile-and-smaller {
+    flex-direction: column;
+
+    .modal__image {
+      width: 100%;
+      max-width: 150px;
+    }
+
+    .modal__title {
+      margin-top: 80px;
+      margin-left: -10px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      text-align: left;
+    }
+  }
+}

@@ -110,12 +110,6 @@
 
     <body>
 
-        {% if (project.showGrid == true and project.debug == true) %}
-
-            {% from '_dev/tools/grid-overlay.html' import gridOverlay %}
-            {{ gridOverlay( { columns: 12 } ) }}
-
-        {% endif %}
 
         {% if site.gtm and site.gtm != 'GTM-XXXX' %}
 
@@ -138,6 +132,8 @@
         </main>
 
         {% include "footer.html" %}
+
+        {% include "menu.html" %}
 
         {% include "elements-modals.html" %}
 

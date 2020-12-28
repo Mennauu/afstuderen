@@ -1,10 +1,15 @@
 .c-logo {
   margin-bottom: $global-spacing-md;
+  color: $color-white;
+  margin-top: $global-spacing-md;
+  padding-top: $global-spacing-md;
+  border-top: 2px solid $color-white;
 }
 
-.logo__image {
-  .image__default {
-    max-height: 50px;
-    width: auto;
-  }
+.logo__description {
+  margin-bottom: $global-spacing-md;
+}
+
+.logo__link {
+  color: $color-white;
 }

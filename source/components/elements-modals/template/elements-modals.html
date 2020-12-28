@@ -8,9 +8,8 @@
         size: 'string',
         mobileOnly: 'false',
         autoFocus: 'true',
-        closeAllOthers: 'true',
-        noBodyClass: 'false',
         closeAllOthers: 'false',
+        noBodyClass: 'false',
         keepScrollPosition: 'true'
     }) %}
 
@@ -18,7 +17,7 @@
 
         <div class="modal__header-content">
 
-        {{ image({
+            {{ image({
             image: element.image,
             preload: element.image.slice(0, -4) + '-10x10.png',
             classes: 'modal__image',

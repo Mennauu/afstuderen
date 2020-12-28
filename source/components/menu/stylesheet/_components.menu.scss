@@ -1,0 +1,96 @@
+#menu-modal {
+  z-index: 9996;
+
+  .modal__container,
+  .modal__content {
+    margin: 0;
+    height: 100%;
+  }
+  .modal__button-close {
+    display: none;
+  }
+}
+
+.c-menu {
+  width: 100%;
+  background-color: $color-purple;
+}
+
+.menu__button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid darken($color-purple, 10%);
+  padding: 15px;
+  font-weight: $font-weight-bold;
+  opacity: 0;
+  transform: translateX(-200px);
+  transition: transform 0.75s;
+  color: $color-white;
+
+  &:nth-child(1) {
+    transition-delay: 0s;
+  }
+
+  &:nth-child(2) {
+    transition-delay: 0.05s;
+  }
+
+  &:nth-child(3) {
+    transition-delay: 0.1s;
+  }
+
+  &:nth-child(4) {
+    transition-delay: 0.15s;
+  }
+
+  &:nth-child(5) {
+    transition-delay: 0.2s;
+  }
+
+  &:nth-child(6) {
+    transition-delay: 0.25s;
+  }
+
+  &:nth-child(7) {
+    transition-delay: 0.3s;
+  }
+
+  &:nth-child(8) {
+    transition-delay: 0.35s;
+  }
+
+  &:nth-child(9) {
+    transition-delay: 0.4s;
+  }
+
+  &:nth-child(10) {
+    transition-delay: 0.45s;
+  }
+
+  &:nth-child(11) {
+    transition-delay: 0.5s;
+  }
+
+  &:nth-child(12) {
+    transition-delay: 0.55s;
+  }
+
+  .modal--is-showing & {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.button__menu-image {
+  height: 50px;
+}
+
+.button__menu-label {
+  padding-left: $global-spacing-md;
+  font-size: 1.6rem;
+}

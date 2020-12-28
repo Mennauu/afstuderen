@@ -1,0 +1,30 @@
+{% from 'modal.html' import modal %}
+
+{% call modal({
+  id: 'menu-modal',
+  size: 'string',
+  mobileOnly: 'true',
+  autoFocus: 'true',
+  closeAllOthers: 'false',
+  noBodyClass: 'false',
+  keepScrollPosition: 'true'
+}) %}
+
+<div class="c-menu">
+  {% for element in elements %}
+
+    <button 
+    class="menu__button" 
+    type="button" 
+    aria-controls="{{ element.button.controls }}" 
+    aria-label="Open modalbox" 
+    tabindex="0"
+  >
+      <img class="button__menu-image" src="{{ element.image }}" alt="{{ element.title }}">
+      <span class="button__menu-label">{{ element.title }}</span>
+    </button>
+
+  {% endfor %}
+</div>
+
+{% endcall %}

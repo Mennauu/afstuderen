@@ -1,10 +1,11 @@
 {% from 'image.html' import image %}
 
 <div class="c-logo">
-  {{ image({
-    image: '/assets/images/logo.png',
-    preload: '/assets/images/logo-10x10.png',
-    classes: 'logo__image',
-    alt: 'logo'
-  })}}
+  <p class="logo__description">De AD Frontend Design & Development wordt ontwikkeld 
+  door de opleiding <a class="logo__link" href="https://www.cmd-amsterdam.nl" target="_blank" rel="nofollower noopener">Communication and Multimedia Design (CMD)</a>
+  van de <a class="logo__link" href="http://www.hva.nl/" target="_blank" rel="nofollower noopener">Hogeschool van Amsterdam</a>.</p>
+
+  <a class="logo__link" href="http://www.hva.nl/" target="_blank" rel="nofollower noopener">
+    {% svg 'brand/hva.svg' %}
+  </a>
 </div>

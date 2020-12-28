@@ -23,3 +23,7 @@ moduleInit.async('[js-hook-studentencontact]', () =>
 moduleInit.async('[js-hook-meeloopdag]', () =>
   import(/* webpackChunkName: "Modal" */ '../components/elements/meeloopdag/javascript'),
 )
+
+moduleInit.async('[js-hook-menu-toggle]', () =>
+  import(/* webpackChunkName: "Modal" */ '../components/menu-toggle/javascript'),
+)

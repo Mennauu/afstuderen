@@ -1,0 +1,61 @@
+.menu__toggle {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  background-color: $color-secondary;
+  height: $global-spacing * 7;
+  width: $global-spacing * 7;
+  z-index: 9997;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px 0 rgba($color-black, 0.1), 0 1px 5px 0 rgba($color-black, 0.1);
+
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    right: $global-spacing-sm;
+    width: $global-spacing-md;
+    height: 2px;
+    background-color: $color-white;
+    transition: 0.2s;
+  }
+
+  &::after {
+    top: 25.5px;
+  }
+
+  &::before {
+    bottom: 35.5px;
+  }
+
+  .menu--is-open & {
+    background-color: $color-white;
+
+    &::after,
+    &::before {
+      right: 22px;
+      background-color: $color-secondary;
+    }
+    &::after {
+      transform: rotate(45deg) translateY(-5px);
+    }
+
+    &::before {
+      transform: rotate(-45deg) translateX(9px) translateY(-5px);
+    }
+  }
+}
+
+.menu__toggle-label {
+  display: block;
+  font-size: 80%;
+  color: $color-white;
+  margin-top: 22px;
+  font-weight: $font-weight-bold;
+  transition: all 0.2s;
+
+  .menu--is-open & {
+    transform: translateY(5px);
+    color: $color-secondary;
+  }
+}

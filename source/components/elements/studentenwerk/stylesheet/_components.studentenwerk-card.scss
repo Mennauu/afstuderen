@@ -1,0 +1,19 @@
+.c-studentenwerk-card {
+  background-color: $color-white;
+  border-radius: 10px;
+
+  @include screen-mobile-and-smaller {
+    margin-bottom: $global-spacing-lg;
+  }
+}
+
+.studentenwerk-card__content-wrapper {
+  padding: $global-spacing;
+}
+
+.studentenwerk-card__author {
+  color: $color-grey-light;
+  font-size: 80%;
+  display: block;
+  margin-top: -3px;
+}

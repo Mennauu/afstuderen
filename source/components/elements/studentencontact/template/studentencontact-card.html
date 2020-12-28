@@ -1,0 +1,23 @@
+{% from 'image.html' import image %}
+
+{% macro studentencontactCard(data) %}
+  <button class="c-studentencontact-card" js-hook-studentencontact>
+
+    {{ image({
+      image: data.image,
+      classes: 'studentencontact-card__image',
+      alt: data.title,
+      objectFit: true,
+      hook: 'studentencontact-image'
+    }) }}
+
+    <div class="studentencontact-card__content-wrapper">
+
+      <h3 class="studentencontact-card__title" js-hook-studentencontact-name>{{ data.title }}</h3>
+      <span class="studentencontact-card__author">Vooropleiding: <strong>{{ data.author }}</strong>
+      </span>
+
+    </div>
+
+  </button>
+{% endmacro %}

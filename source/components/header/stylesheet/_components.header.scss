@@ -1,5 +1,6 @@
 $header-transition-time: 400ms;
 $header-transition-ease: $ease-in-out-quad;
 
-// .c-header {
-// }
+.c-header {
+  margin-top: $global-spacing-sm;
+}

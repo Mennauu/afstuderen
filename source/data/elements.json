@@ -1,0 +1,134 @@
+[
+  {
+    "title": "Digitale meeloopdag",
+    "modalTitle": "De interactieve digitale meeloopdag",
+    "description": "Doe de interactieve digitale meeloopdag en laat je virtueel rondleiden. Je kennis wordt op de proef gesteld!",
+    "image": "/assets/images/elements/meeloopdag.png",
+    "include": "meeloopdag.html",
+    "button": {
+      "label": "Start meeloopdag",
+      "controls": "modal-meeloopdag"
+    }
+  },
+  {
+    "title": "Contact met studenten",
+    "modalTitle": "Kom in contact met onze tweedejaars-studenten",
+    "description": "Wij snappen dat het lastig is om een goede studiekeuze te maken. Een gesprek met een student van de opleiding kan je helpen met alle vragen die je hebt. Ze zijn bereikbaaar via Whatsapp.",
+    "image": "/assets/images/elements/contact.png",
+    "include": "studentencontact.html",
+    "button": {
+      "label": "Neem contact op",
+      "controls": "modal-contact"
+    }
+  },
+  {
+    "title": "Werk van Studenten",
+    "modalTitle": "De gemaakte opdrachten van onze studenten",
+    "description": "De studenten maken tijdens de lessen opdrachten voor echte klanten. Zij delen graag het werk dat ze hebben gemaakt voor deze klanten.",
+    "image": "/assets/images/elements/werk.png",
+    "include": "studentenwerk.html",
+    "button": {
+      "label": "Bekijk studentenwerk",
+      "controls": "modal-studentenwerk"
+    }
+  },
+  {
+    "title": "Ervaringen van studenten",
+    "modalTitle": "De gemaakte opdrachten van onze studenten",
+    "description": "Studenten vertellen je over de ervaring die zij hebben gehad in het eerste jaar van de opleiding",
+    "image": "/assets/images/elements/ervaringen.png",
+    "include": "studentenwerk.html",
+    "button": {
+      "label": "Lees ervaringen",
+      "controls": "modal-ervaringen"
+    }
+  },
+  {
+    "title": "Uitdagingen",
+    "modalTitle": "De gemaakte opdrachten van onze studenten",
+    "description": "Maak echte opdrachten die ook tijdens de lessen gegeven worden. Het maakt niet uit of je een beginner bent of al veel ervaring hebt.",
+    "image": "/assets/images/elements/uitdagingen.png",
+    "include": "studentenwerk.html",
+    "button": {
+      "label": "Opdrachten maken",
+      "controls": "modal-uitdaingen"
+    }
+  },
+  {
+    "title": "Werkmogelijkheden",
+    "modalTitle": "De gemaakte opdrachten van onze studenten",
+    "description": "Met je Associate Degree Frontend Design & Development heb je veel mogelijkheden op de arbeidsmarkt. Je kan bijvoorbeeld terecht in de wereld van digital agencies.",
+    "image": "/assets/images/elements/werkmogelijkheden.png",
+    "include": "studentenwerk.html",
+    "button": {
+      "label": "Bekijk beroepen",
+      "controls": "modal-werkmogelijkheden"
+    }
+  },
+  {
+    "title": "Studieprogramma",
+    "modalTitle": "De gemaakte opdrachten van onze studenten",
+    "description": "Bij de start van je studie ligt de nadruk op het ontwikkelen van kennis en vaardigheden. Ook komt direct de praktijk aan bod. Je leert praktijkcases aan te pakken samen met medestudenten, docenten en professionals.",
+    "image": "/assets/images/elements/studieprogramma.png",
+    "include": "studentenwerk.html",
+    "button": {
+      "label": "Bekijk programma",
+      "controls": "modal-studieprogramma"
+    }
+  },
+  {
+    "title": "Praktische informatie",
+    "modalTitle": "De gemaakte opdrachten van onze studenten",
+    "description": "In één overzicht alle praktische informatie over de opleiding.",
+    "image": "/assets/images/elements/informatie.png",
+    "include": "studentenwerk.html",
+    "button": {
+      "label": "Bekijk informatie",
+      "controls": "modal-informatie"
+    }
+  },
+  {
+    "title": "Videos over de opleiding",
+    "modalTitle": "De gemaakte opdrachten van onze studenten",
+    "description": "Geen zin om te lezen? Preof de sfeer van de opleiding videos te bekijken",
+    "image": "/assets/images/elements/videos.png",
+    "include": "studentenwerk.html",
+    "button": {
+      "label": "Bekijk videos",
+      "controls": "modal-videos"
+    }
+  },
+  {
+    "title": "Docenten lounge",
+    "modalTitle": "De gemaakte opdrachten van onze studenten",
+    "description": "Maak kennis met de docenten van de opleiding in de docenten lounge",
+    "image": "/assets/images/elements/lounge.png",
+    "include": "studentenwerk.html",
+    "button": {
+      "label": "Kennismaken",
+      "controls": "modal-docenten"
+    }
+  },
+  {
+    "title": "Locatie en wonen",
+    "modalTitle": "De gemaakte opdrachten van onze studenten",
+    "description": "Bekijk de locatie van de school en woonmogelijkheden rondom de school. Ook vertellen we je over de stad Amsterdam!",
+    "image": "/assets/images/elements/locatie.png",
+    "include": "studentenwerk.html",
+    "button": {
+      "label": "Bekijk locatie",
+      "controls": "modal-locatie"
+    }
+  },
+  {
+    "title": "Naast je studie",
+    "modalTitle": "De gemaakte opdrachten van onze studenten",
+    "description": "Je wilt natuurlijk weten wat je naast je studie kan doen, zoals studieverenigingen, sportactiviteiten, clubs of het vinden van een bijbaantje.",
+    "image": "/assets/images/elements/naast.png",
+    "include": "studentenwerk.html",
+    "button": {
+      "label": "Bekijk Activiteiten",
+      "controls": "modal-naast-studie"
+    }
+  }
+]

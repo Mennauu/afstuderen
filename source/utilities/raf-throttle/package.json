@@ -1,0 +1,8 @@
+{
+    "name": "dept-raf-throttle",
+    "license": "MIT",
+    "repository": "https://bitbucket.org/tamtam-nl/tamtam-frontend-shelf",
+    "dependencies": {
+        "raf": "3.4.0"
+    }
+}

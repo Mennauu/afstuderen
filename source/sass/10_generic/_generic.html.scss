@@ -23,7 +23,6 @@ html {
 body {
   @include fluid-type($font-size-body, $font-size-body * 0.875);
   line-height: $font-line-height-body;
-  hyphens: auto;
+  hyphens: none;
   word-break: normal;
-  padding: $global-spacing-lg;
 }

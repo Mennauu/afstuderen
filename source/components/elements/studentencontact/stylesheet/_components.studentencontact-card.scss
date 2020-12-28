@@ -1,0 +1,42 @@
+.c-studentencontact-card {
+  background-color: $color-white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+
+  @include screen-mobile-and-smaller {
+    margin-bottom: $global-spacing-sm;
+
+    &:first-of-type {
+      margin-top: $global-spacing-sm;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  [js-hook-objectfit-container] {
+    height: auto !important;
+  }
+}
+
+.studentencontact-card__content-wrapper {
+  padding: $global-spacing-sm;
+  text-align: left;
+}
+
+.studentencontact-card__author {
+  color: $color-grey-light;
+  font-size: 80%;
+  display: block;
+  margin-top: -3px;
+}
+
+.studentencontact-card__image {
+  .image__default {
+    height: 180px !important;
+    border-top-left-radius: $global-spacing;
+    border-top-right-radius: $global-spacing;
+  }
+}

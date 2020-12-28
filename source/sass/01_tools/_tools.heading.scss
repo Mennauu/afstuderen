@@ -7,13 +7,13 @@
 @mixin h2 {
   color: $color-black;
   line-height: $font-line-height-h2;
-  @include fluid-type($font-size-h2, $font-size-h2/1.5);
+  @include fluid-type($font-size-h2, $font-size-h2 / 1.25);
 }
 
 @mixin h3 {
   color: $color-black;
   line-height: $font-line-height-h3;
-  @include fluid-type($font-size-h3, $font-size-h3/1.2);
+  font-size: $font-size-h3;
 }
 
 @mixin h4 {

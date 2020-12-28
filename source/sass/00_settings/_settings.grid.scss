@@ -14,9 +14,9 @@ $grid-config: (
   max-width: $breakpoint-desktop,
   columns: 12,
   grid-gutter: 20px,
-  grid-gutter-small: 10px,
+  grid-gutter-small: 20px,
   container-gutter: 30px,
-  container-gutter-small: 10px,
+  container-gutter-small: 20px,
   add-push-pull: true,
   add-pre-post: true,
 );

@@ -1,0 +1,41 @@
+{% from 'studentenwerk-card.html' import studentenwerkCard %}
+{% from 'studentenwerk-preview.html' import studentenwerkPreview %}
+
+<div class="c-studentenwerk">
+
+  <div class="studentenwerk__cards-wrapper">
+
+    {{ studentenwerkCard({
+      title: 'Bubbly Footwear designs',
+      author: 'Henk',
+      image: '/assets/images/bubbly.png'
+    }) }}
+
+    {{ studentenwerkCard({
+      title: 'Eigen design video player',
+      author: 'Jannie Bosman',
+      image: '/assets/images/video-player.png'
+    }) }}
+
+    {{ studentenwerkCard({
+      title: 'Bouw een website helper',
+      author: 'Marco Polder',
+      image: '/assets/images/bouw-website.png'
+    }) }}
+
+    {{ studentenwerkCard({
+      title: 'interactieve grafieken',
+      author: 'Harry Jantjes',
+      image: '/assets/images/grafieken.png'
+    }) }}
+
+  </div>
+
+  {{ studentenwerkPreview({
+    title: 'Creeër je eigen t-shirt!',
+    author: 'Jannie Smits',
+    image: '/assets/images/tshirt.png',
+    authorImage: '/assets/images/jannie.png'
+  }) }}
+
+</div>

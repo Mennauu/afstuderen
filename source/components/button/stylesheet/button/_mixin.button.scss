@@ -43,7 +43,11 @@ $button-transition-ease: $ease-in-out-quad;
     left: 0;
     border-bottom: 15px solid transparent;
     border-right: 10px solid transparent;
-    border-left: 20px solid $color-purple;
+    border-left: 20px solid $color-off-white;
+
+    @include screen-tablet-portrait-and-bigger {
+      border-left: 20px solid $color-purple;
+    }
   }
 
   &::after {

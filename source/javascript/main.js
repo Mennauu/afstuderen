@@ -7,10 +7,19 @@ import './config'
 import '@utilities/detect-touch'
 import '@utilities/detect-keyboard-focus'
 import '@utilities/polyfills'
+import '@utilities/focus-trap'
 import '@components/image'
 
 import moduleInit from '@/utilities/module-init'
-// import Example from '@components/example' // Sync
-// moduleInit.sync('[js-hook-module-example]', Example) // Sync
 
-moduleInit.async('[js-hook-module-example]', () => import('@components/example')) // Async
+moduleInit.async('[js-hook-modal]', () =>
+  import(/* webpackChunkName: "Modal" */ '@components/modal'),
+)
+
+moduleInit.async('[js-hook-studentencontact]', () =>
+  import(/* webpackChunkName: "Modal" */ '../components/elements/studentencontact/javascript'),
+)
+
+moduleInit.async('[js-hook-meeloopdag]', () =>
+  import(/* webpackChunkName: "Modal" */ '../components/elements/meeloopdag/javascript'),
+)

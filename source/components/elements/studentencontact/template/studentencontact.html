@@ -1,0 +1,38 @@
+{% from 'studentencontact-card.html' import studentencontactCard %}
+
+<div class="c-studentencontact">
+
+  <h3 class="studentencontact__title">Wij snappen dat het lastig is om een goede studiekeuze te maken.</h3>
+
+  <p class="studentencontact__description">Een gesprek met een student van de opleiding kan je helpen met alle 
+  vragen die je hebt. Ze zijn bereikbaaar via Whatsapp.</p>
+
+  <div class="studentencontact__cards-wrapper">
+
+    {{ studentencontactCard({
+      title: 'Maaike de Vries (22)',
+      author: 'MBO-4 - Mediadevelopment',
+      image: '/assets/images/student1.jpg'
+    }) }}
+
+    {{ studentencontactCard({
+      title: 'Jeffrey Post (18)',
+      author: 'HAVO',
+      image: '/assets/images/student2.jpg'
+    }) }}
+
+    {{ studentencontactCard({
+      title: 'Nuri Khaleci (21)',
+      author: 'MBO-4 - Mediavormgeving',
+      image: '/assets/images/student3.jpg'
+    }) }}
+
+    {{ studentencontactCard({
+      title: 'Rachid Overeem (23)',
+      author: 'MBO-4 - Bedrijfskunde',
+      image: '/assets/images/student4.jpg'
+    }) }}
+
+  </div>
+
+</div>

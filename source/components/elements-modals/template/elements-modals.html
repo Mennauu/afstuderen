@@ -1,0 +1,42 @@
+{% from 'modal.html' import modal %}
+{% from 'image.html' import image %}
+
+{% for element in elements %}
+
+    {% call modal({
+        id: element.button.controls,
+        size: 'string',
+        mobileOnly: 'false',
+        autoFocus: 'true',
+        closeAllOthers: 'true',
+        noBodyClass: 'false',
+        closeAllOthers: 'false',
+        keepScrollPosition: 'true'
+    }) %}
+
+    <div class="modal__header">
+
+        <div class="modal__header-content">
+
+        {{ image({
+            image: element.image,
+            preload: element.image.slice(0, -4) + '-10x10.png',
+            classes: 'modal__image',
+            alt: element.title
+        }) }}
+
+            <h2 class="modal__title">{{ element.modalTitle }}</h2>
+
+        </div>
+
+    </div>
+
+    <div class="modal__context">
+
+        {% include element.include %}
+
+    </div>
+
+    {% endcall %}
+
+{% endfor %}

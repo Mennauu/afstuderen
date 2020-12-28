@@ -1,0 +1,22 @@
+{% from 'button.html' import button %}
+
+<div class="c-meeloopdag" js-hook-meeloopdag>
+  <h3 class="meeloopdag__title">Benieuwd naar de sfeer en locatie van de Associate Degree Frontend Design & Development?</h2>
+
+  <p class="meeloopdag__description">
+    Doe de interactieve digitale meeloopdag en laat je virtueel rondleiden door het schoolgebouw. Luister
+    naar de ervaringen van een AD-student, kijk filmpjes en 360 graden foto's en laat je hersenen
+    kraken, want je kennis wordt op de proef gesteld!
+  </p>
+
+  <p class="meeloopdag__description">De digitale meeloopdag duurt ongeveer <strong>15 minuten</strong> en bevat <strong>10 uitdagingen</strong>.</p>
+
+  {{ button({ 
+    element: 'button', 
+    label: 'Beginnen', 
+    variant: 'tertiary', 
+    class: 'meeloopdag__button',
+    hook: 'meeloopdag-start-button',
+    controls: 'meeloopdag-steps'
+  }) }}
+</div>

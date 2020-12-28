@@ -1,0 +1,38 @@
+{% from 'image.html' import image %}
+
+{% macro studentenwerkPreview(data) %}
+  <div class="c-studentenwerk-preview">
+
+    <div class="studentenwerk-preview__meta">
+
+      <div class="studentenwerk-preview__meta-text-wrapper">
+        <h3 class="studentenwerk-preview__title">{{ data.title }}</h3>
+        <span class="studentenwerk-preview__author">gemaakt door <strong>{{ data.author }}</strong>
+        </span>
+      </div>
+
+      <div class="studentenwerk-preview__meta-image-wrapper">
+        {{ image({
+          image: data.authorImage,
+          classes: 'studentenwerk-preview__meta-image',
+          alt: data.author,
+          objectFit: true
+        }) }}
+      </div>
+
+    </div>
+
+    <div class="studentenwerk-preview__description">
+      <p>"Tijdens het vak 'Web App From Scratch' heb ik een website 
+      gemaakt waar je een t-shirt uit kan kiezen en zelf kan designen."</p>
+    </div>
+
+    {{ image({
+      image: data.image,
+      classes: 'studentenwerk-preview__image',
+      alt: data.title,
+      objectFit: true
+    }) }}
+
+  </div>
+{% endmacro %}

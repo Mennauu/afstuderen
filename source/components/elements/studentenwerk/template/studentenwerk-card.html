@@ -1,0 +1,22 @@
+{% from 'image.html' import image %}
+
+{% macro studentenwerkCard(data) %}
+  <div class="c-studentenwerk-card">
+
+    {{ image({
+      image: data.image,
+      classes: 'studentenwerk-card__image',
+      alt: data.title,
+      objectFit: true
+    }) }}
+
+    <div class="studentenwerk-card__content-wrapper">
+
+      <h3 class="studentenwerk-card__title">{{ data.title }}</h3>
+      <span class="studentenwerk-card__author">gemaakt door <strong>{{ data.author }}</strong>
+      </span>
+
+    </div>
+
+  </div>
+{% endmacro %}

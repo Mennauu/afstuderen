@@ -5,6 +5,7 @@
 @import 'button/variant/mixin.ghost';
 @import 'button/variant/mixin.primary';
 @import 'button/variant/mixin.secondary';
+@import 'button/variant/mixin.tertiary';
 
 .c-button {
   @include button;
@@ -19,6 +20,10 @@
 
 .c-button--secondary {
   @include button--secondary;
+}
+
+.c-button--tertiary {
+  @include button--tertiary;
 }
 
 .c-button--ghost {

@@ -1,0 +1,12 @@
+.c-elements-section {
+  display: grid;
+
+  @include screen-tablet-portrait-and-bigger {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: $global-spacing-md;
+  }
+
+  @include screen-desktop-and-bigger {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

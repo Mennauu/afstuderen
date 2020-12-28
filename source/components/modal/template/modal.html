@@ -1,0 +1,49 @@
+{#
+    @shelf-version: 1.1.0
+    Modal macro
+    Usage as a call, inject the modal content there.
+
+    Options:
+        Required
+        id {string|int}          - Adds an id to the modal
+
+        Optional
+        size {string}            - Adds a modifier to the component
+        mobileOnly {boolean}     - Will only set tabindex initially on tablet portrait and smaller.
+        autoFocus {boolean}      - Enable or disable auto focus when opening the modal
+        noBodyClass {boolean}    - Prevents setting the body class when modal is open
+        closeAllOthers {boolean} - Forces all other modalboxes to close when this one opens
+        noClose {boolean}        - Hides the close button (esc. key is still bound)
+#}
+
+{% macro modal(data) %}
+
+    <div class="c-modal{% if data.size %} modal-size--{{ data.size }}{% endif %}"
+        {%- if data.id %} id="{{ data.id }}"{% endif -%}
+        {%- if data.mobileOnly %} data-modal-mobile-only="{{ data.mobileOnly }}"{% endif -%}
+        {%- if data.autoFocus %} data-modal-auto-focus="{{ data.autoFocus }}"{% endif -%}
+        {%- if data.noBodyClass %} data-modal-no-body-class="{{ data.noBodyClass }}"{% endif -%}
+        {%- if data.closeAllOthers %} data-modal-close-all-others="{{ data.closeAllOthers }}"{% endif -%}
+        {%- if data.keepScrollPosition %} data-modal-keep-scroll-position="{{ data.keepScrollPosition }}"{% endif -%}
+        js-hook-modal>
+
+        <div class="modal__container">
+
+            <div class="modal__content" role="dialog">
+
+                {{ caller() }}
+
+                {% if not data.noClose %}
+                    <button type="button" class="modal__button-close" js-hook-button-modal-close aria-label="Close modalbox">
+                        <span class="modal__button-close-text">&times;</span>
+                    </button>
+                {% endif %}
+
+            </div>
+
+        </div>
+
+        <div class="modal__background" js-hook-button-modal-close></div>
+    </div>
+
+{% endmacro %}

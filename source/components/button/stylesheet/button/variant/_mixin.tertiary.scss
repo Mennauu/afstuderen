@@ -1,0 +1,47 @@
+// Style
+$button-tertiary-spacing: $global-spacing;
+$button-tertiary-border-radius: 3px;
+
+// Colors
+$button-tertiary-font-color: $color-white;
+$button-tertiary-icon-color: $button-tertiary-font-color;
+$button-tertiary-background-color: $color-tertiary;
+$button-tertiary-font-color-hover: $color-white;
+$button-tertiary-icon-color-hover: $button-tertiary-font-color-hover;
+$button-tertiary-background-color-hover: $color-primary;
+
+// Transitions
+$button-tertiary-transition-time: 300ms;
+$button-tertiary-transition-ease: $ease-in-out-quad;
+
+@mixin button--tertiary {
+  @include button;
+  background-color: $button-tertiary-background-color;
+  color: $button-tertiary-font-color;
+
+  &::before {
+    border-left: 20px solid $color-purple;
+  }
+
+  &::after {
+    border-right: 20px solid $color-purple;
+  }
+
+  svg {
+    fill: $button-tertiary-font-color;
+  }
+
+  @include hover-focus {
+    color: $button-tertiary-font-color-hover;
+    background-color: $button-tertiary-background-color-hover;
+  }
+
+  @include keyboard-focus {
+    color: $button-tertiary-font-color-hover;
+    background-color: lighten($button-tertiary-background-color-hover, 50%);
+
+    svg {
+      fill: $button-tertiary-font-color-hover;
+    }
+  }
+}

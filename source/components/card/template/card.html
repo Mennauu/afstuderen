@@ -8,6 +8,7 @@
 
       {{ image({
         image: data.image,
+        preload: data.image.slice(0, -4) + '-10x10.png',
         classes: 'card__image',
         alt: data.title
       })}}

@@ -44,5 +44,8 @@
   },
   "devDependencies": {
     "tamtam-frontend-builder": "git+https://bitbucket.org/tamtam-nl/tamtam-frontend-builder.git#2.0.2"
+  },
+  "dependencies": {
+    "raf": "^3.4.1"
   }
 }

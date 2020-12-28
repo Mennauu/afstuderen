@@ -1,0 +1,8 @@
+.studentenwerk__cards-wrapper {
+  display: flex;
+  flex-direction: row;
+
+  @include screen-mobile-and-smaller {
+    flex-direction: column;
+  }
+}

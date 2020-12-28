@@ -1,0 +1,32 @@
+{% from 'button.html' import button %}
+
+<div class="meeloopdag-step1 is--hidden" js-hook-meeloopdag-step-one>
+  <img
+    class="meeloopdag-step1__first-video-background"
+    src="/assets/images/videos/step1-video-background.png"
+    alt="Video background"
+/>
+  <div class="video-container">
+    <video playsinline muted oncontextmenu="return false;" preload="auto" js-hook-meeloopdag-first-video>
+      <source src="/assets/videos/step1-video.mp4" type="video/mp4"/>
+    </video>
+  </div>
+
+  <button
+    class="meeloopdag__video-button meeloopdag__button-first-video-repeat is--hidden"
+    type="button"
+    js-hook-meeloopdag-button-first-video-repeat
+    tabindex="0"
+  >
+    <span class="button__label">Opnieuw afspelen</span>
+  </button>
+
+  <button
+    class="meeloopdag__video-button meeloopdag__button-first-video-continue is--hidden"
+    type="button"
+    js-hook-meeloopdag-button-first-video-continue
+    tabindex="0"
+  >
+    <span class="button__label">Doorgaan {% svg 'icons/chevron-right.svg' %}</span>
+  </button>
+</div>

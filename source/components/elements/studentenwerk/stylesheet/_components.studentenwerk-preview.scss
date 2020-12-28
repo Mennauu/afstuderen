@@ -1,0 +1,38 @@
+.c-studentenwerk-preview {
+  margin-top: $global-spacing-xlg;
+}
+
+.studentenwerk-preview__meta-image {
+  max-width: $global-spacing-xlg;
+}
+
+.studentenwerk-preview__meta-image-wrapper {
+  margin-left: $global-spacing;
+}
+
+.studentenwerk-preview__meta {
+  display: flex;
+  color: $color-white;
+  text-align: right;
+  justify-content: flex-end;
+  background-color: $color-secondary;
+  padding: $global-spacing;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.studentenwerk-preview__description {
+  color: $color-white;
+  background-color: $color-secondary;
+  padding: $global-spacing;
+  margin-bottom: -5px;
+}
+
+.studentenwerk-preview__title {
+  color: $color-white;
+}
+
+.studentenwerk-preview__author {
+  display: block;
+  margin-top: -5px;
+}

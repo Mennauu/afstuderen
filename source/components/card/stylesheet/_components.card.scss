@@ -1,7 +1,13 @@
 .c-card {
   position: relative;
   display: flex;
+  flex-direction: column;
   max-width: 600px;
+  margin-bottom: $global-spacing-lg;
+
+  @include screen-tablet-portrait-and-bigger {
+    flex-direction: row;
+  }
 
   &::before {
     content: '';
@@ -28,14 +34,16 @@
   background-color: $color-purple;
   display: flex;
   align-items: center;
-  padding: $global-spacing;
-  min-width: 250px;
+  padding: $global-spacing-lg $global-spacing-lg * 2;
+
+  @include screen-tablet-portrait-and-bigger {
+    min-width: 200px;
+    padding: $global-spacing-lg;
+  }
 }
 
 .card__image {
   width: 100%;
-  // -webkit-filter: drop-shadow(-10px 3px 1px #1e185b);
-  // filter: drop-shadow(-10px 3px 1px #1e185b);
 }
 
 .card__content-wrapper {
@@ -57,5 +65,10 @@
 .card__button {
   position: absolute;
   bottom: $global-spacing-sm;
-  margin-left: -$global-spacing-lg;
+  width: 80%;
+
+  @include screen-tablet-portrait-and-bigger {
+    margin-left: -$global-spacing-lg;
+    width: 90%;
+  }
 }

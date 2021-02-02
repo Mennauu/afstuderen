@@ -1,5 +1,6 @@
 const MODAL_CONTEXT_CLASS = '.c-studentencontact'
 const MODAL_ID = 'modal-contact'
+const MODAL_TITLE = '.modal__title'
 
 const JS_HOOK_STUDENTENCONTACT_IMAGE = '.studentencontact-card__image .image__default'
 const JS_HOOK_STUDENTENCONTACT_NAME = '[js-hook-studentencontact-name]'
@@ -9,6 +10,7 @@ class Studentencontact {
     this.element = element
     this.modal = document.getElementById(MODAL_ID)
     this.modalContext = this.modal.querySelector(MODAL_CONTEXT_CLASS)
+    this.modalTitle = this.modal.querySelector(MODAL_TITLE)
     this.image = element.querySelector(JS_HOOK_STUDENTENCONTACT_IMAGE)?.src
     this.name = element.querySelector(JS_HOOK_STUDENTENCONTACT_NAME)?.textContent.slice(0, -5)
 
@@ -58,6 +60,8 @@ class Studentencontact {
 
   removeTransition() {
     this.modalContext.classList.remove('studentencontact__transition')
+
+    this.modalTitle.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'start' })
   }
 }
 

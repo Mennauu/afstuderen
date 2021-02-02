@@ -24,7 +24,7 @@
             alt: element.title
         }) }}
 
-            <h2 class="modal__title">{{ element.modalTitle }}</h2>
+            <h2 class="modal__title" js-hook-modal-title>{{ element.modalTitle }}</h2>
 
         </div>
 
@@ -35,6 +35,10 @@
         {% include element.include %}
 
     </div>
+
+    <button class="modal__back-to-top" js-hook-modal-back-to-top>
+        {% svg 'icons/chevron-right.svg' %}
+    </button>
 
     {% endcall %}
 

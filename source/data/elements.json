@@ -34,10 +34,10 @@
   },
   {
     "title": "Ervaringen van studenten",
-    "modalTitle": "De gemaakte opdrachten van onze studenten",
+    "modalTitle": "Onze studenten delen hun ervaringen",
     "description": "Studenten reflecteren en vertellen je over de ervaringen die zij hebben meegemaakt in het eerste jaar van de opleiding.",
     "image": "/assets/images/elements/ervaringen.png",
-    "include": "studentenwerk.html",
+    "include": "studentenervaring.html",
     "button": {
       "label": "Lees ervaringen",
       "controls": "modal-ervaringen"
@@ -48,7 +48,7 @@
     "modalTitle": "De gemaakte opdrachten van onze studenten",
     "description": "Maak echte opdrachten die ook tijdens de lessen gegeven worden. Het maakt niet uit of je een beginner bent of al veel ervaring hebt.",
     "image": "/assets/images/elements/uitdagingen.png",
-    "include": "studentenwerk.html",
+    "include": "uitdagingen.html",
     "button": {
       "label": "Opdrachten maken",
       "controls": "modal-uitdaingen"
@@ -56,10 +56,10 @@
   },
   {
     "title": "Werkmogelijkheden",
-    "modalTitle": "De gemaakte opdrachten van onze studenten",
+    "modalTitle": "Als wat kan je aan de slag na je opleiding?",
     "description": "Met je Associate Degree Frontend Design & Development heb je veel mogelijkheden op de arbeidsmarkt. Je kan bijvoorbeeld terecht in de wereld van digital agencies.",
     "image": "/assets/images/elements/werkmogelijkheden.png",
-    "include": "studentenwerk.html",
+    "include": "werkmogelijkheden.html",
     "button": {
       "label": "Bekijk beroepen",
       "controls": "modal-werkmogelijkheden"
@@ -67,10 +67,10 @@
   },
   {
     "title": "Studieprogramma",
-    "modalTitle": "De gemaakte opdrachten van onze studenten",
+    "modalTitle": "Het studieprogramma van de komende twee jaren",
     "description": "Bij de start van je studie ligt de nadruk op het ontwikkelen van kennis en vaardigheden. Ook komt direct de praktijk aan bod. Je leert praktijkcases aan te pakken samen met medestudenten, docenten en professionals.",
     "image": "/assets/images/elements/studieprogramma.png",
-    "include": "studentenwerk.html",
+    "include": "studieprogramma.html",
     "button": {
       "label": "Bekijk programma",
       "controls": "modal-studieprogramma"
@@ -78,10 +78,10 @@
   },
   {
     "title": "Praktische informatie",
-    "modalTitle": "De gemaakte opdrachten van onze studenten",
+    "modalTitle": "In één overzicht alle praktische informatie over de opleiding.",
     "description": "In één overzicht alle praktische informatie over de opleiding.",
     "image": "/assets/images/elements/informatie.png",
-    "include": "studentenwerk.html",
+    "include": "algemeen.html",
     "button": {
       "label": "Bekijk informatie",
       "controls": "modal-informatie"
@@ -89,10 +89,10 @@
   },
   {
     "title": "Video's over de opleiding",
-    "modalTitle": "De gemaakte opdrachten van onze studenten",
-    "description": "Geen zin om te lezen? Proef de sfeer van de opleiding door video's te bekijken",
+    "modalTitle": "Proef de sfeer van de opleiding door video's te bekijken",
+    "description": "Geen zin om te lezen? Proef de sfeer van de opleiding door video's te bekijken.",
     "image": "/assets/images/elements/videos.png",
-    "include": "studentenwerk.html",
+    "include": "videos.html",
     "button": {
       "label": "Bekijk videos",
       "controls": "modal-videos"
@@ -100,10 +100,10 @@
   },
   {
     "title": "Docenten lounge",
-    "modalTitle": "De gemaakte opdrachten van onze studenten",
+    "modalTitle": "Maak kennis met de docenten van de opleiding",
     "description": "Maak kennis met de docenten van de opleiding in de docenten lounge",
     "image": "/assets/images/elements/lounge.png",
-    "include": "studentenwerk.html",
+    "include": "docenten.html",
     "button": {
       "label": "Kennismaken",
       "controls": "modal-docenten"
@@ -111,10 +111,10 @@
   },
   {
     "title": "Locatie en wonen",
-    "modalTitle": "De gemaakte opdrachten van onze studenten",
+    "modalTitle": "Over de locatie van de school en woonmogelijkheden",
     "description": "Bekijk de locatie van de school en woonmogelijkheden rondom de school. Ook vertellen we je over de stad Amsterdam!",
     "image": "/assets/images/elements/locatie.png",
-    "include": "studentenwerk.html",
+    "include": "locatie.html",
     "button": {
       "label": "Bekijk locatie",
       "controls": "modal-locatie"
@@ -122,10 +122,10 @@
   },
   {
     "title": "Naast je studie",
-    "modalTitle": "De gemaakte opdrachten van onze studenten",
+    "modalTitle": "Naast je studie in Amsterdam",
     "description": "Je wilt natuurlijk weten wat je naast je studie kan doen, zoals studieverenigingen, sportactiviteiten, clubs of het vinden van een bijbaantje.",
     "image": "/assets/images/elements/naast.png",
-    "include": "studentenwerk.html",
+    "include": "naast.html",
     "button": {
       "label": "Bekijk Activiteiten",
       "controls": "modal-naast-studie"

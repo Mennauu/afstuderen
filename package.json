@@ -43,9 +43,12 @@
     "create": "dept-builder create"
   },
   "devDependencies": {
+    "gulp-sass": "^4.1.0",
     "tamtam-frontend-builder": "git+https://bitbucket.org/tamtam-nl/tamtam-frontend-builder.git#2.0.2"
   },
   "dependencies": {
+    "360-image-viewer": "^1.0.1",
+    "canvas-fit": "^1.5.0",
     "raf": "^3.4.1"
   }
 }

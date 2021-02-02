@@ -43,6 +43,12 @@
   margin-left: auto;
   margin-right: auto;
   display: block;
+  background-color: $color-secondary;
+  padding: 10px;
+  color: $color-white;
+  border-radius: 10px;
+  font-size: 1.6rem;
+  font-weight: $font-weight-bold;
 }
 
 // STEPS
@@ -63,6 +69,10 @@
 
 .is--hidden {
   visibility: hidden;
+}
+
+.is--hidden-full {
+  display: none;
 }
 
 .video-container {
@@ -103,16 +113,303 @@
 
 .meeloopdag__button-first-video-repeat {
   left: $global-spacing-sm;
-  background-color: $color-secondary;
+  background-color: $color-primary;
   font-size: 80%;
 }
 
 .meeloopdag__button-first-video-continue {
   right: $global-spacing-sm;
-  background-color: $color-primary;
+  background-color: $color-secondary;
 
   svg {
     fill: $color-white;
     margin-left: 5px;
+  }
+}
+
+.meeloopdag-step3 {
+  background-color: $color-purple;
+}
+
+.meeloopdag__quiz-wrapper {
+  width: 100%;
+  padding: $global-spacing-md;
+}
+
+.meeloopdag__quiz-title {
+  @include h3;
+  color: $color-white;
+  margin-bottom: $global-spacing-sm;
+}
+
+.meeloopdag__quiz-image {
+  object-fit: cover;
+  max-width: 100%;
+}
+
+.meeloopdag__quiz-radio-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.meeloopdag__quiz-radio-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: $global-spacing;
+  border: 1px solid darken($color-purple, 20%);
+  padding: $global-spacing;
+  border-radius: 10px;
+  background-color: lighten($color-purple, 5%);
+}
+
+.meeloopdag__quiz-radio-input {
+  margin-left: $global-spacing;
+  min-width: 20px;
+  min-height: 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.meeloopdag__quiz-radio-input:checked + .meeloopdag__quiz-radio-label,
+.meeloopdag__quiz-radio-input:checked + .meeloopdag-quiz--is-wrong {
+  background-color: darken($color-purple, 20%);
+  padding: 10px 10px 10px 60px;
+  border-radius: 10px;
+  margin: -10px -10px -10px -40px;
+}
+
+.meeloopdag__quiz-radio-label {
+  margin-left: $global-spacing-sm;
+  color: $color-white;
+  font-size: 1.6rem;
+}
+
+.meeloopdag__quiz-radio-button {
+  background-color: $color-secondary;
+  padding: $global-spacing;
+  border-radius: 10px;
+  color: $color-white;
+  margin-top: $global-spacing-md;
+  margin-bottom: $global-spacing;
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: $font-weight-bold;
+}
+
+.meeloopdag-quiz--is-wrong {
+  background-color: #b30000 !important;
+  padding: 10px 10px 10px 60px;
+  border-radius: 10px;
+  margin: -10px -10px -10px -40px;
+}
+
+.meeloopdag-quiz--is-right {
+  background-color: #3d9970 !important;
+  padding: 10px 10px 10px 60px;
+  border-radius: 10px;
+  margin: -10px -10px -10px -40px;
+}
+
+.meeloopdag__quiz-radio-good-title {
+  transform: scale(0);
+  height: 0;
+  transition: transform 0.5s;
+  color: $color-white;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.height--is-auto {
+  height: auto;
+  transform: scale(1) !important;
+}
+
+.rotate__instructions {
+}
+
+.rotate__button {
+  background-color: $color-white;
+  padding: $global-spacing $global-spacing-sm;
+  border-radius: 10px;
+  position: fixed;
+  bottom: $global-spacing-md;
+  left: $global-spacing-sm;
+  z-index: 1;
+
+  svg {
+    transform: rotate(270deg);
+    transition: transform 0.3s;
+  }
+}
+
+.rotate__info-block {
+  background-color: $color-white;
+  padding: $global-spacing-sm;
+  margin: $global-spacing-sm;
+  border-radius: 10px;
+  margin-bottom: 90px;
+  transition: transform 0.3s, visibility 0.3s;
+  transform: translateX(0);
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+}
+
+.rotate__info-block.is--hidden {
+  transform: translateX(-100%);
+}
+
+.rotate--is-active {
+  svg {
+    transform: rotate(90deg) !important;
+  }
+}
+
+.rotate__button-float {
+  position: fixed;
+  bottom: $global-spacing-sm;
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.meeloopdag-end {
+  background-color: $color-purple;
+  min-height: 100%;
+  padding: $global-spacing-md;
+  color: $color-white;
+}
+
+.meeloopdag-end__title {
+  color: $color-white;
+  margin-bottom: $global-spacing;
+}
+
+.related {
+  margin-top: $global-spacing-xlg;
+}
+
+.related__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $color-white;
+  border-radius: 10px;
+  padding: $global-spacing-sm;
+  margin-bottom: $global-spacing-md;
+
+  img {
+    max-width: 50%;
+    margin-bottom: $global-spacing;
+  }
+
+  h3 {
+    color: $color-grey-dark;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+  }
+
+  svg {
+    height: 20px;
+    width: 20px;
+    fill: $color-white;
+  }
+
+  .related--chevron {
+    margin-left: 50px;
+    border-radius: 50%;
+    background-color: $color-secondary;
+    padding: $global-spacing-sm;
+  }
+}
+
+.meeloopdag__timer {
+  height: 15px;
+  width: 100%;
+  background: rgba($color-black, 0.4);
+  position: fixed;
+  z-index: 2;
+  bottom: 0;
+  right: 0;
+  transform: translateX(-100%);
+  transition: 33s linear;
+}
+
+.meeloopdag__timer--is-active {
+  transform: translateX(0) !important;
+}
+
+.meeloopdag__timer-two {
+  height: 15px;
+  width: 100%;
+  background: rgba($color-black, 0.4);
+  position: fixed;
+  z-index: 2;
+  bottom: 0;
+  right: 0;
+  transform: translateX(-100%);
+  transition: 16s linear;
+}
+
+.meeloopdag-step--count {
+  background-color: $color-white;
+  padding: 5px 10px;
+  margin: 10px;
+  position: absolute;
+  top: 0;
+  z-index: 5;
+  left: 0;
+  border-radius: 10px;
+  font-size: 1.4rem;
+
+  strong {
+    font-size: 2rem;
+  }
+
+  span {
+    font-size: 1.1rem;
+  }
+}
+
+.meeloopdag__video-text {
+  position: absolute;
+  z-index: 2;
+  bottom: 60px;
+  padding: 0 40px;
+  color: $color-white;
+  text-shadow: 0 2px 2px rgba($color-black, 0.8);
+  font-size: 2rem;
+  width: 100%;
+  text-align: center;
+}
+
+.modal__back-to-top {
+  padding: 5px 12px;
+  background-color: $color-white;
+  transform: rotate(-90deg);
+  border-radius: 7px;
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  z-index: 10;
+}
+
+#modal-contact,
+#modal-studentenwerk,
+#modal-ervaringen,
+#modal-videos {
+  .modal__context {
+    padding: 20px 20px 60px 20px;
+  }
+}
+
+.studentenwerk-preview__image {
+  .image__default {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
 }

@@ -1,0 +1,39 @@
+<div class="meeloopdag-step2 is--hidden" js-hook-meeloopdag-step-two>
+  <div class="meeloopdag-step--count">
+    <strong>3</strong>
+    <span>/</span> 4
+  </div>
+  {#
+  <img
+    class="meeloopdag-step1__first-video-background"
+    src="/assets/images/videos/step1-video-background.png"
+    alt="Video background"
+  />
+  #}
+  <div class="video-container">
+    <video playsinline oncontextmenu="return false;" preload="auto" js-hook-meeloopdag-second-video>
+      <source src="/assets/videos/step2-video.mp4" type="video/mp4"/>
+    </video>
+  </div>
+
+  <p class="meeloopdag__video-text" js-hook-meeloopdag-video-text-two></p>
+
+  <button
+    class="meeloopdag__video-button meeloopdag__button-first-video-repeat is--hidden"
+    type="button"
+    js-hook-meeloopdag-button-second-video-repeat
+    tabindex="0"
+  >
+    <span class="button__label">Opnieuw afspelen</span>
+  </button>
+
+  <button
+    class="meeloopdag__video-button meeloopdag__button-first-video-continue is--hidden"
+    type="button"
+    js-hook-meeloopdag-button-second-video-continue
+    tabindex="0"
+  >
+    <span class="button__label">Doorgaan {% svg 'icons/chevron-right.svg' %}</span>
+  </button>
+  <div class="meeloopdag__timer-two" js-hook-meeloopdag-timer-two></div>
+</div>

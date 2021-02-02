@@ -1,0 +1,34 @@
+.c-videos {
+  color: $color-white;
+
+  iframe {
+    max-width: 100%;
+  }
+}
+
+.videos__intro {
+  @include h3;
+  color: $color-white;
+  margin-bottom: $global-spacing-md;
+  hyphens: auto;
+}
+
+.videos__title {
+  @include h2;
+  color: $color-white;
+  font-size: 2.2rem;
+  margin-top: $global-spacing-md;
+}
+
+.videos__subtitle {
+  color: $color-tertiary;
+}
+
+.videos__list {
+  margin-bottom: $global-spacing-sm;
+  margin-left: $global-spacing-sm;
+}
+
+.videos__strong {
+  display: block;
+}

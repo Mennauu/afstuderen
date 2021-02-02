@@ -20,6 +20,10 @@ moduleInit.async('[js-hook-studentencontact]', () =>
   import(/* webpackChunkName: "Modal" */ '../components/elements/studentencontact/javascript'),
 )
 
+moduleInit.async('[js-hook-studentenervaring]', () =>
+  import(/* webpackChunkName: "Modal" */ '../components/elements/studentenervaring/javascript'),
+)
+
 moduleInit.async('[js-hook-meeloopdag]', () =>
   import(/* webpackChunkName: "Modal" */ '../components/elements/meeloopdag/javascript'),
 )

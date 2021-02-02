@@ -1,0 +1,107 @@
+.c-uitdagingen {
+  color: $color-white;
+}
+
+.uitdagingen__intro {
+  @include h3;
+  color: $color-white;
+  margin-bottom: $global-spacing;
+  hyphens: auto;
+}
+
+.uitdagingen__title {
+  @include h2;
+  color: $color-white;
+  font-size: 2.2rem;
+  margin-top: $global-spacing-lg;
+  margin-bottom: $global-spacing-sm;
+}
+
+.uitdagingen__quiz-wrapper {
+  width: 100%;
+  padding: $global-spacing-md;
+}
+
+.uitdagingen__quiz-title {
+  @include h3;
+  color: $color-white;
+  margin-bottom: $global-spacing-sm;
+}
+
+.uitdagingen__quiz-image {
+  object-fit: cover;
+  max-width: 100%;
+}
+
+.uitdagingen__quiz-radio-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.uitdagingen__quiz-radio-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: $global-spacing;
+  border: 1px solid darken($color-purple, 20%);
+  padding: $global-spacing;
+  border-radius: 10px;
+  background-color: lighten($color-purple, 5%);
+}
+
+.uitdagingen__quiz-radio-input {
+  margin-left: $global-spacing;
+  min-width: 20px;
+  min-height: 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.uitdagingen__quiz-radio-input:checked + .uitdagingen__quiz-radio-label,
+.uitdagingen__quiz-radio-input:checked + .uitdagingen-quiz--is-wrong {
+  background-color: darken($color-purple, 20%);
+  padding: 10px 10px 10px 60px;
+  border-radius: 10px;
+  margin: -10px -10px -10px -40px;
+}
+
+.uitdagingen__quiz-radio-label {
+  margin-left: $global-spacing-sm;
+  color: $color-white;
+  font-size: 1.6rem;
+}
+
+.uitdagingen__quiz-radio-button {
+  background-color: $color-secondary;
+  padding: $global-spacing;
+  border-radius: 10px;
+  color: $color-white;
+  margin-top: $global-spacing-md;
+  margin-bottom: $global-spacing;
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: $font-weight-bold;
+}
+
+.uitdagingen-quiz--is-wrong {
+  background-color: #b30000 !important;
+  padding: 10px 10px 10px 60px;
+  border-radius: 10px;
+  margin: -10px -10px -10px -40px;
+}
+
+.uitdagingen-quiz--is-right {
+  background-color: #3d9970 !important;
+  padding: 10px 10px 10px 60px;
+  border-radius: 10px;
+  margin: -10px -10px -10px -40px;
+}
+
+.uitdagingen__quiz-radio-good-title {
+  transform: scale(0);
+  height: 0;
+  transition: transform 0.5s;
+  color: $color-white;
+  margin-top: 20px;
+  padding: 10px;
+}

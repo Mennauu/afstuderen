@@ -44,6 +44,7 @@ $button-transition-ease: $ease-in-out-quad;
     border-bottom: 15px solid transparent;
     border-right: 10px solid transparent;
     border-left: 20px solid $color-off-white;
+    margin: -1px;
 
     @include screen-tablet-portrait-and-bigger {
       border-left: 20px solid $color-purple;
@@ -58,6 +59,7 @@ $button-transition-ease: $ease-in-out-quad;
     border-top: 15px solid transparent;
     border-right: 20px solid $color-off-white;
     border-left: 10px solid transparent;
+    margin: -1px;
   }
 
   @include hover-focus {

@@ -1,0 +1,47 @@
+.c-docenten {
+  color: $color-white;
+
+  iframe {
+    max-width: 100%;
+  }
+
+  p {
+    &:first-of-type {
+      margin-bottom: $global-spacing-xlg;
+    }
+  }
+}
+
+.docenten__intro {
+  @include h3;
+  color: $color-white;
+  margin-bottom: $global-spacing-md;
+  hyphens: auto;
+}
+
+.docenten__title {
+  @include h2;
+  color: $color-white;
+  font-size: 2.2rem;
+  margin-top: $global-spacing-md;
+}
+
+.docenten__subtitle {
+  color: $color-tertiary;
+}
+
+.docenten__list {
+  margin-bottom: $global-spacing-sm;
+  margin-left: $global-spacing-sm;
+}
+
+.docenten__strong {
+  display: block;
+}
+
+.docenten__image {
+  max-width: 100%;
+  border-radius: 10px;
+  display: block;
+  margin-bottom: $global-spacing-sm;
+}

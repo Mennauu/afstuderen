@@ -94,6 +94,7 @@
 
   @include screen-mobile-and-smaller {
     grid-template-columns: 1fr;
+    grid-auto-rows: unset;
   }
 }
 

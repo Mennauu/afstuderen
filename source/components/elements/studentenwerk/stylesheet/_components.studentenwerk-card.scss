@@ -1,6 +1,7 @@
 .c-studentenwerk-card {
   background-color: $color-white;
   border-radius: 10px;
+  text-decoration: none;
 
   @include screen-mobile-and-smaller {
     margin-bottom: $global-spacing-lg;

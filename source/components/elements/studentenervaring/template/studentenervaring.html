@@ -1,0 +1,37 @@
+{% from 'studentenervaring-card.html' import studentenervaringCard %}
+
+<div class="c-studentenervaring">
+
+  <h3 class="studentenervaring__title">Studenten reflecteren en vertellen je over de ervaringen die zij hebben meegemaakt in het eerste jaar van de opleiding.</h3>
+
+  <p class="studentenervaring__description">We hebben een aantal van onze studenten gevraagd om te reflecteren op het vorige jaar, zodat jij van andere studenten hoort hoe het is om de opleiding te doen.</p>
+
+  <div class="studentenervaring__cards-wrapper">
+
+    {{ studentenervaringCard({
+      title: 'Jeffrey Post (18)',
+      author: 'HAVO',
+      image: '/assets/images/student2.jpg'
+    }) }}
+
+    {{ studentenervaringCard({
+      title: 'Rachid Overeem (23)',
+      author: 'MBO-4 - Bedrijfskunde',
+      image: '/assets/images/student4.jpg'
+    }) }}
+
+    {{ studentenervaringCard({
+      title: 'Nuri Khaleci (21)',
+      author: 'MBO-4 - Mediavormgeving',
+      image: '/assets/images/student3.jpg'
+    }) }}
+
+    {{ studentenervaringCard({
+      title: 'Maaike de Vries (22)',
+      author: 'MBO-4 - Mediadevelopment',
+      image: '/assets/images/student1.jpg'
+    }) }}
+
+  </div>
+
+</div>

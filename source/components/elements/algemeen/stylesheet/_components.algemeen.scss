@@ -1,0 +1,30 @@
+.c-algemeen {
+  color: $color-white;
+}
+
+.algemeen__intro {
+  @include h3;
+  color: $color-white;
+  margin-bottom: $global-spacing;
+  hyphens: auto;
+}
+
+.algemeen__title {
+  @include h2;
+  color: $color-white;
+  font-size: 2.2rem;
+  margin-top: $global-spacing-md;
+}
+
+.algemeen__subtitle {
+  color: $color-tertiary;
+}
+
+.algemeen__list {
+  margin-bottom: $global-spacing-sm;
+  margin-left: $global-spacing-sm;
+}
+
+.algemeen__strong {
+  display: block;
+}

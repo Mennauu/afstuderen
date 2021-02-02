@@ -1,16 +1,22 @@
-{% from 'button.html' import button %}
-
 <div class="meeloopdag-step1 is--hidden" js-hook-meeloopdag-step-one>
+  <div class="meeloopdag-step--count">
+    <strong>1</strong>
+    <span>/</span> 4
+  </div>
+  {#
   <img
     class="meeloopdag-step1__first-video-background"
     src="/assets/images/videos/step1-video-background.png"
     alt="Video background"
-/>
+  />
+  #}
   <div class="video-container">
     <video playsinline oncontextmenu="return false;" preload="auto" js-hook-meeloopdag-first-video>
       <source src="/assets/videos/step1-video.mp4" type="video/mp4"/>
     </video>
   </div>
+
+  <p class="meeloopdag__video-text" js-hook-meeloopdag-video-text></p>
 
   <button
     class="meeloopdag__video-button meeloopdag__button-first-video-repeat is--hidden"
@@ -27,6 +33,8 @@
     js-hook-meeloopdag-button-first-video-continue
     tabindex="0"
   >
-    <span class="button__label">Doorgaan {% svg 'icons/chevron-right.svg' %}</span>
+    <span class="button__label">Doorgaan</span>
   </button>
+
+  <div class="meeloopdag__timer" js-hook-meeloopdag-timer></div>
 </div>

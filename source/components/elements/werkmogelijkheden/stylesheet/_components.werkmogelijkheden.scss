@@ -1,0 +1,17 @@
+.c-werkmogelijkheden {
+  color: $color-white;
+}
+
+.werkmogelijkheden__intro {
+  @include h3;
+  color: $color-white;
+  margin-bottom: $global-spacing;
+  hyphens: auto;
+}
+
+.werkmogelijkheden__title {
+  @include h2;
+  color: $color-white;
+  font-size: 2.2rem;
+  margin-top: $global-spacing-md;
+}

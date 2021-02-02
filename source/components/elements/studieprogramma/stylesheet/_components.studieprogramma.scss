@@ -1,0 +1,26 @@
+.c-studieprogramma {
+  color: $color-white;
+}
+
+.studieprogramma__intro {
+  @include h3;
+  color: $color-white;
+  margin-bottom: $global-spacing;
+  hyphens: auto;
+}
+
+.studieprogramma__title {
+  @include h2;
+  color: $color-white;
+  font-size: 2.2rem;
+  margin-top: $global-spacing-md;
+}
+
+.studieprogramma__subtitle {
+  color: $color-tertiary;
+}
+
+.studieprogramma__list {
+  margin-bottom: $global-spacing-sm;
+  margin-left: $global-spacing-sm;
+}

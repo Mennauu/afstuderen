@@ -1,5 +1,3 @@
-{% from 'button.html' import button %}
-
 <div class="c-meeloopdag" js-hook-meeloopdag>
   <h3 class="meeloopdag__title">Benieuwd naar de sfeer en locatie van de Associate Degree Frontend Design & Development?</h2>
 
@@ -11,12 +9,7 @@
 
   <p class="meeloopdag__description">De digitale meeloopdag duurt ongeveer <strong>15 minuten</strong> en bevat <strong>10 uitdagingen</strong>.</p>
 
-  {{ button({ 
-    element: 'button', 
-    label: 'Beginnen', 
-    variant: 'tertiary', 
-    class: 'meeloopdag__button',
-    hook: 'meeloopdag-start-button',
-    controls: 'meeloopdag-steps'
-  }) }}
+  <button class="meeloopdag__button" type="button" js-hook-meeloopdag-start-button="" aria-controls="meeloopdag-steps" tabindex="0">
+
+    <span class="button__label">Beginnen</span></button>
 </div>

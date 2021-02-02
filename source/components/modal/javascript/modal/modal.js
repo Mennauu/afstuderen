@@ -8,6 +8,9 @@ const MODAL_CLOSE_HOOK = '[js-hook-button-modal-close]'
 const MODAL_VISIBLE_CLASS = 'modal--is-showing'
 const MODAL_HTML_CLASS = 'is--modal-open'
 
+const JS_HOOK_MODAL_TO_TOP = '[js-hook-modal-back-to-top]'
+const JS_HOOK_MODAL_TITLE = '[js-hook-modal-title]'
+
 class Modal {
   constructor() {
     this.registeredModals = {}
@@ -47,6 +50,8 @@ class Modal {
 
     const triggerBtn = Array.from(document.querySelectorAll(`[aria-controls=${id}]`))
     const closeBtn = Array.from(el.querySelectorAll(MODAL_CLOSE_HOOK))
+    const backToTopBtn = Array.from(el.querySelectorAll(JS_HOOK_MODAL_TO_TOP))
+
     const mobileOnly = el.dataset.modalMobileOnly === 'true'
 
     const modal = {
@@ -54,6 +59,7 @@ class Modal {
       id,
       triggerBtn,
       closeBtn,
+      backToTopBtn,
     }
 
     if (!mobileOnly || !ScreenDimensions.isTabletLandscapeAndBigger) {
@@ -88,7 +94,7 @@ class Modal {
    *
    * @param {BindOptions}
    */
-  bindModalEvents({ el, id, triggerBtn, closeBtn }) {
+  bindModalEvents({ el, id, triggerBtn, closeBtn, backToTopBtn }) {
     triggerBtn.forEach(triggerEl =>
       triggerEl.addEventListener('click', () => {
         if (el.modalIsOpen) {
@@ -108,6 +114,14 @@ class Modal {
       el.addEventListener('click', () => {
         Events.$trigger('modal::close', { data: { id } })
         Events.$trigger(`modal[${id}]::close`, { data: { id } })
+      }),
+    )
+
+    backToTopBtn.forEach(button =>
+      button.addEventListener('click', () => {
+        const modalTitle = el.querySelector(JS_HOOK_MODAL_TITLE)
+
+        modalTitle.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'start' })
       }),
     )
 

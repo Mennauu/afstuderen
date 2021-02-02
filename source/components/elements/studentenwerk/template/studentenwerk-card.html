@@ -1,7 +1,7 @@
 {% from 'image.html' import image %}
 
 {% macro studentenwerkCard(data) %}
-  <div class="c-studentenwerk-card">
+  <a href="https://demos.sketchfab.com/clients/nike-configurator/index.html" class="c-studentenwerk-card" target="_blank" rel="noopener nofollower">
 
     {{ image({
       image: data.image,
@@ -18,5 +18,5 @@
 
     </div>
 
-  </div>
+  </a>
 {% endmacro %}
